@@ -7,16 +7,16 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/PIJAMAS/CAPRI $26.000/0c5f120f-1874-4235-b3ee-6311471d1b29.jpg"
+    imagen: "/web/web/PIJAMAS/CAPRI $26.000/0c5f120f-1874-4235-b3ee-6311471d1b29.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/PIJAMAS/CAPRI $26.000/3482525c-4ba2-4e27-92d7-0be0e1d440f9.jpg"
+    imagen: "/web/web/PIJAMAS/CAPRI $26.000/3482525c-4ba2-4e27-92d7-0be0e1d440f9.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/PIJAMAS/CAPRI $26.000/88b42299-9cd8-43fb-b57b-a298400b4819.jpg"
+    imagen: "/web/web/PIJAMAS/CAPRI $26.000/88b42299-9cd8-43fb-b57b-a298400b4819.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/PIJAMAS/CAPRI $26.000/d6f8b47f-3a9f-46af-af64-7dd24ab59d8b.jpg"
+    imagen: "/web/web/PIJAMAS/CAPRI $26.000/d6f8b47f-3a9f-46af-af64-7dd24ab59d8b.jpg"
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   CAPRI - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.
