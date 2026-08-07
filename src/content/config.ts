@@ -5,7 +5,14 @@ const products = defineCollection({
   schema: z.object({
     nombre: z.string(),
     categoria: z.enum(['pijamas', 'lenceria', 'conjuntos']),
-    subtipo: z.string().optional(),
+    subtipo: z.enum([
+      'babydoll', 'bodys', 'clasica',
+      'bobito', 'ninos', 'pijama-plus', 'pijama-satin', 'pijama-camiseta',
+      'pijama-pantalon', 'pijama-tiras', 'pijama-batola', 'pijama-crop',
+      'pijama-short', 'pijama-clasico',
+      'enterizo', 'short', 'pantalon', 'tela-rib', 'conjunto',
+      'falda', 'deportivo',
+    ]).optional(),
     coleccion: z.string().default('Colección 2026'),
     precio: z.number().int().nonnegative(),
     destacado: z.boolean().default(false),

@@ -8,7 +8,24 @@ const products = await getCollection('products');
 const allColors = Array.from(new Set(products.flatMap((p) => p.data.colores.map((c) => c.nombre))));
 const maxPrice = Math.max(...products.map((p) => p.data.precio));
 const cats = ['pijamas', 'lenceria', 'conjuntos'];
-const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
+
+// Subtipos por categoria (derivados de los productos existentes)
+const subtiposByCat: Record<string, string[]> = {
+  pijamas: ['bobito', 'ninos', 'pijama-plus', 'pijama-satin', 'pijama-camiseta', 'pijama-pantalon', 'pijama-tiras', 'pijama-batola', 'pijama-crop', 'pijama-short', 'pijama-clasico'],
+  lenceria: ['babydoll', 'bodys', 'clasica'],
+  conjuntos: ['enterizo', 'short', 'pantalon', 'tela-rib', 'conjunto', 'falda', 'deportivo'],
+};
+
+const subtiposLabels: Record<string, Record<string, string>> = {
+  pijamas: {},
+  lenceria: {},
+  conjuntos: {},
+};
+for (const cat of cats) {
+  for (const s of subtiposByCat[cat]) {
+    subtiposLabels[cat][s] = t('subtipo.' + s);
+  }
+}
 ---
 
 <Base title={`Catálogo · Abril Pijamas y Lencería`}>
@@ -37,15 +54,10 @@ const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
           </div>
         </details>
 
-        <details class="border-b border-ink/10 pb-5" data-filter-group="subtipo">
-          <summary class="eyebrow cursor-pointer flex justify-between">{t('catalogo.filter.subtipo')} <span class="text-ink/40">(lencería)</span></summary>
-          <div class="mt-4 space-y-2">
-            {subtiposLenceria.map((s) => (
-              <label class="flex items-center gap-3 text-sm cursor-pointer">
-                <input type="checkbox" value={s} data-filter-subtipo={s} class="accent-burgundy" />
-                <span class="capitalize">{t('subtipo.' + s)}</span>
-              </label>
-            ))}
+        <details class="border-b border-ink/10 pb-5 hidden" data-filter-group="subtipo" data-subtipo-container>
+          <summary class="eyebrow cursor-pointer flex justify-between">{t('catalogo.filter.subtipo')} <span class="text-ink/40"></span></summary>
+          <div class="mt-4 space-y-2" data-subtipo-list>
+            <!-- Se rellena dinamicamente con JS segun categoria activa -->
           </div>
         </details>
 
@@ -96,11 +108,12 @@ const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
   </section>
 </Base>
 
-<script is:inline define:vars={{ maxPrice }}>
+<script is:inline define:vars={{ maxPrice, subtiposByCat, subtiposLabels }}>
   const items = Array.from(document.querySelectorAll('[data-product-item]'));
   const empty = document.querySelector('[data-empty]');
   const catInputs = Array.from(document.querySelectorAll('[data-filter-cat]'));
-  const subtipoInputs = Array.from(document.querySelectorAll('[data-filter-subtipo]'));
+  const subtipoContainer = document.querySelector('[data-subtipo-container]');
+  const subtipoList = document.querySelector('[data-subtipo-list]');
   const colorBtns = Array.from(document.querySelectorAll('[data-filter-color]'));
   const priceRange = document.querySelector('[data-price-max]');
   const priceLabel = document.querySelector('[data-price-max-label]');
@@ -110,6 +123,39 @@ const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
   let activeColors = new Set();
   let maxPriceActive = maxPrice;
 
+  function renderSubtipos() {
+    if (!subtipoList) return;
+    subtipoList.innerHTML = '';
+    if (!activeCat || !subtiposByCat[activeCat]) {
+      if (subtipoContainer) subtipoContainer.classList.add('hidden');
+      return;
+    }
+    const subtipos = subtiposByCat[activeCat];
+    const labels = subtiposLabels[activeCat] || {};
+    subtipos.forEach((s) => {
+      const label = document.createElement('label');
+      label.className = 'flex items-center gap-3 text-sm cursor-pointer';
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.value = s;
+      input.setAttribute('data-filter-subtipo', s);
+      input.className = 'accent-burgundy';
+      if (activeSubtipos.has(s)) input.checked = true;
+      input.addEventListener('change', () => {
+        if (input.checked) activeSubtipos.add(s);
+        else activeSubtipos.delete(s);
+        apply();
+      });
+      label.appendChild(input);
+      const span = document.createElement('span');
+      span.className = 'capitalize';
+      span.textContent = labels[s] || s;
+      label.appendChild(span);
+      subtipoList.appendChild(label);
+    });
+    if (subtipoContainer) subtipoContainer.classList.remove('hidden');
+  }
+
   function apply() {
     let visible = 0;
     items.forEach((el) => {
@@ -118,7 +164,7 @@ const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
       const precio = Number(el.getAttribute('data-precio'));
       const colores = (el.getAttribute('data-colores') || '').split('|');
       const okCat = !activeCat || activeCat === cat;
-      const okSub = !activeCat || activeCat !== 'lenceria' || activeSubtipos.size === 0 || activeSubtipos.has(sub || 'clasica');
+      const okSub = !activeCat || activeSubtipos.size === 0 || activeSubtipos.has(sub || '');
       const okColor = activeColors.size === 0 || colores.some((c) => activeColors.has(c));
       const okPrice = precio <= maxPriceActive;
       if (okCat && okSub && okColor && okPrice) {
@@ -133,12 +179,8 @@ const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
 
   catInputs.forEach((c) => c.addEventListener('change', () => {
     activeCat = c.value;
-    apply();
-  }));
-
-  subtipoInputs.forEach((c) => c.addEventListener('change', () => {
-    if (c.checked) activeSubtipos.add(c.value);
-    else activeSubtipos.delete(c.value);
+    activeSubtipos.clear();
+    renderSubtipos();
     apply();
   }));
 
@@ -160,9 +202,10 @@ const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
   document.querySelector('[data-clear-filters]').addEventListener('click', () => {
     activeCat = ''; activeSubtipos.clear(); activeColors.clear(); maxPriceActive = maxPrice;
     catInputs.forEach((c) => c.checked = (c.value === ''));
-    subtipoInputs.forEach((c) => c.checked = false);
+    document.querySelectorAll('[data-filter-subtipo]').forEach((c) => c.checked = false);
     colorBtns.forEach((b) => b.style.outline = 'none');
     if (priceRange) { priceRange.value = maxPrice; if (priceLabel) priceLabel.textContent = new Intl.NumberFormat('es-CO').format(maxPrice); }
+    renderSubtipos();
     apply();
   });
 
@@ -173,7 +216,7 @@ const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
     const cat = params.get('cat');
     if (cat && ['pijamas', 'lenceria', 'conjuntos'].includes(cat)) {
       const input = document.querySelector(`[data-filter-cat="${cat}"]`);
-      if (input) { input.checked = true; activeCat = cat; apply(); }
+      if (input) { input.checked = true; activeCat = cat; renderSubtipos(); apply(); }
     }
   }
 </script>
