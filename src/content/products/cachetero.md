@@ -8,7 +8,7 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/cachetero-8-000/l-xl.jpg"
+    imagen: "/web/lenceria/lenceria/cachetero-8-000/l-xl.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

@@ -8,22 +8,22 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/ref-alondra-27-000/3-sm-8-lxl.jpg"
+    imagen: "/web/lenceria/lenceria/ref-alondra-27-000/3-sm-8-lxl.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/ref-alondra-27-000/5-sm-8-lxl.jpg"
+    imagen: "/web/lenceria/lenceria/ref-alondra-27-000/5-sm-8-lxl.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/ref-alondra-27-000/6-sm-13-lxl.jpg"
+    imagen: "/web/lenceria/lenceria/ref-alondra-27-000/6-sm-13-lxl.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/ref-alondra-27-000/6-sm-8-lxl.jpg"
+    imagen: "/web/lenceria/lenceria/ref-alondra-27-000/6-sm-8-lxl.jpg"
   - nombre: "Color 5"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/ref-alondra-27-000/7-sm-10-lxl.jpg"
+    imagen: "/web/lenceria/lenceria/ref-alondra-27-000/7-sm-10-lxl.jpg"
   - nombre: "Color 6"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/ref-alondra-27-000/9-sm-6-lxl.jpg"
+    imagen: "/web/lenceria/lenceria/ref-alondra-27-000/9-sm-6-lxl.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

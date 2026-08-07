@@ -8,13 +8,13 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/emilia-30-000/1-sm.jpg"
+    imagen: "/web/lenceria/babydoll/emilia-30-000/1-sm.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/emilia-30-000/13-l-4-sm.jpg"
+    imagen: "/web/lenceria/babydoll/emilia-30-000/13-l-4-sm.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/emilia-30-000/5-m-4-l.jpg"
+    imagen: "/web/lenceria/babydoll/emilia-30-000/5-m-4-l.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

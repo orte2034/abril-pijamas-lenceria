@@ -8,7 +8,7 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/bodys/body-suplex-23-000/e2043374-421a-4666-b991-fcc12867671f.jpg"
+    imagen: "/web/lenceria/bodys/body-suplex-23-000/e2043374-421a-4666-b991-fcc12867671f.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

@@ -8,16 +8,16 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/bodys/boddy-23-000/1-l.jpg"
+    imagen: "/web/lenceria/bodys/boddy-23-000/1-l.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/bodys/boddy-23-000/1-sm-2-.jpg"
+    imagen: "/web/lenceria/bodys/boddy-23-000/1-sm-2-.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/bodys/boddy-23-000/1-sm.jpg"
+    imagen: "/web/lenceria/bodys/boddy-23-000/1-sm.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/bodys/boddy-23-000/4-sm-4-l.jpg"
+    imagen: "/web/lenceria/bodys/boddy-23-000/4-sm-4-l.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

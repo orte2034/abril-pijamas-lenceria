@@ -8,16 +8,16 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-pantalon-camiseta-33-000/2af9eed6-29c6-432f-abb4-dea3d7f62feb.jpg"
+    imagen: "/web/pijamas/pijama-pantalon-camiseta-33-000/2af9eed6-29c6-432f-abb4-dea3d7f62feb.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-pantalon-camiseta-33-000/63a82428-055d-472a-b6cb-31ca8b23eacf.jpg"
+    imagen: "/web/pijamas/pijama-pantalon-camiseta-33-000/63a82428-055d-472a-b6cb-31ca8b23eacf.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-pantalon-camiseta-33-000/6db636a0-d05a-4baa-8ebe-7865613823b2.jpg"
+    imagen: "/web/pijamas/pijama-pantalon-camiseta-33-000/6db636a0-d05a-4baa-8ebe-7865613823b2.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-pantalon-camiseta-33-000/a02e7300-3117-4612-956d-65ddb641a16e.jpg"
+    imagen: "/web/pijamas/pijama-pantalon-camiseta-33-000/a02e7300-3117-4612-956d-65ddb641a16e.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

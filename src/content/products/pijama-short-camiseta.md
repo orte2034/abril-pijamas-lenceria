@@ -8,16 +8,16 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-short-camiseta-25-000/403e9599-69b9-4f57-abb2-07e889153dc6.jpg"
+    imagen: "/web/pijamas/pijama-short-camiseta-25-000/403e9599-69b9-4f57-abb2-07e889153dc6.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-short-camiseta-25-000/86d02979-9c62-4645-a723-d283ff6c75a4.jpg"
+    imagen: "/web/pijamas/pijama-short-camiseta-25-000/86d02979-9c62-4645-a723-d283ff6c75a4.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-short-camiseta-25-000/aa23280b-188a-4325-b4cc-eb1b414b8736.jpg"
+    imagen: "/web/pijamas/pijama-short-camiseta-25-000/aa23280b-188a-4325-b4cc-eb1b414b8736.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-short-camiseta-25-000/c8e92dac-9e1a-433c-ba12-92629adddb4c.jpg"
+    imagen: "/web/pijamas/pijama-short-camiseta-25-000/c8e92dac-9e1a-433c-ba12-92629adddb4c.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

@@ -8,7 +8,7 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/tanga-hilo-9-000/9eacfe16-812c-44af-b9a1-cf4dbeec7a40.jpg"
+    imagen: "/web/lenceria/lenceria/tanga-hilo-9-000/9eacfe16-812c-44af-b9a1-cf4dbeec7a40.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

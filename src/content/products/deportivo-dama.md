@@ -8,7 +8,7 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/conjunto-short-animado/deportivo-dama-38-000/dfadd588-65bf-4d7b-8044-805a66ccef6f.jpg"
+    imagen: "/web/conjunto-short-animado/deportivo-dama-38-000/dfadd588-65bf-4d7b-8044-805a66ccef6f.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

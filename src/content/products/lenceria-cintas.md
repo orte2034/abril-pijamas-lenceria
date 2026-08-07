@@ -8,7 +8,7 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/lenceria-cintas-19-000/9778767a-d2df-4935-9dc3-76b87ac2de31.jpg"
+    imagen: "/web/lenceria/lenceria/lenceria-cintas-19-000/9778767a-d2df-4935-9dc3-76b87ac2de31.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

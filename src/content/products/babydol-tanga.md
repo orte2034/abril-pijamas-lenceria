@@ -8,19 +8,19 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/babydol-tanga-29-000/1-lxl.jpg"
+    imagen: "/web/lenceria/babydoll/babydol-tanga-29-000/1-lxl.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/babydol-tanga-29-000/1-sm-2-lxl.jpg"
+    imagen: "/web/lenceria/babydoll/babydol-tanga-29-000/1-sm-2-lxl.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/babydol-tanga-29-000/5-lxl-1-sm.jpg"
+    imagen: "/web/lenceria/babydoll/babydol-tanga-29-000/5-lxl-1-sm.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/babydol-tanga-29-000/6-lxl-2-sm.jpg"
+    imagen: "/web/lenceria/babydoll/babydol-tanga-29-000/6-lxl-2-sm.jpg"
   - nombre: "Color 5"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/babydol-tanga-29-000/6-sm-4-lxl.jpg"
+    imagen: "/web/lenceria/babydoll/babydol-tanga-29-000/6-sm-4-lxl.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

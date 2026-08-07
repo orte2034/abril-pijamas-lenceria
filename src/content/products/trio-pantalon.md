@@ -8,19 +8,19 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/trio-pantalon-29-000/04cb33e3-155c-4402-b959-4678223dad79.jpg"
+    imagen: "/web/pijamas/trio-pantalon-29-000/04cb33e3-155c-4402-b959-4678223dad79.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/trio-pantalon-29-000/1a352aad-34cc-43e4-b3ef-36af1a62485b.jpg"
+    imagen: "/web/pijamas/trio-pantalon-29-000/1a352aad-34cc-43e4-b3ef-36af1a62485b.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/trio-pantalon-29-000/chatgpt-image-8-abr-2026-13_45_56.png"
+    imagen: "/web/pijamas/trio-pantalon-29-000/chatgpt-image-8-abr-2026-13_45_56.png"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/trio-pantalon-29-000/chatgpt-image-8-abr-2026-13_49_14.png"
+    imagen: "/web/pijamas/trio-pantalon-29-000/chatgpt-image-8-abr-2026-13_49_14.png"
   - nombre: "Color 5"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/trio-pantalon-29-000/f60528b8-9208-428e-a7f1-c7db00abddea.jpg"
+    imagen: "/web/pijamas/trio-pantalon-29-000/f60528b8-9208-428e-a7f1-c7db00abddea.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
