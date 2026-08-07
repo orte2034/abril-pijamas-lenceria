@@ -36,6 +36,9 @@ colores:
   - nombre: "Color 10"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/pantalon-cargo-25-000/unnamed.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Pantalon Cargo - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

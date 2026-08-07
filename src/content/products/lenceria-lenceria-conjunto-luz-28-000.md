@@ -15,6 +15,9 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-luz-28-000/82cf6c7c-49ef-47a9-adec-c381152cd5f6.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Conjunto Luz - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

@@ -30,6 +30,9 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-animado-15-000/oferta/5.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Oferta - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

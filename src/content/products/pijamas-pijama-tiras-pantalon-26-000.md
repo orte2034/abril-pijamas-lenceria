@@ -30,6 +30,9 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-tiras-pantalon-26-000/gemini_generated_image_zhxp4tzhxp4tzhxp.png"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Pijama Tiras Pantalon - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

@@ -33,6 +33,9 @@ colores:
   - nombre: "Color 9"
     hex: "#cccccc"
     imagen: "/web/conjunto-short-animado/conjunto-short-burdacamiseta-piel-durazno-29-000/f318f419-2f08-4bc2-be70-412ef3f21645.jpg"
+tallasDisponibles: ["S", "M", "L"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Conjunto Short Burdacamiseta Piel Durazno - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

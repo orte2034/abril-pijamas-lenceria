@@ -27,6 +27,9 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/importados-bena-20-000/2-s-2-m-4-l-2-.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Importados Bena - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

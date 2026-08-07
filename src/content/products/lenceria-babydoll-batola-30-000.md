@@ -18,6 +18,9 @@ colores:
   - nombre: "Color 4"
     hex: "#cccccc"
     imagen: "/web/lenceria/babydoll/batola-30-000/5-sm-4-l.jpg"
+tallasDisponibles: ["S", "M", "L"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Batola - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

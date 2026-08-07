@@ -12,6 +12,9 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/lenceria/babydoll/babydoll-cachetero-28-000/6-lxl-2-sm.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Babydoll Cachetero - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

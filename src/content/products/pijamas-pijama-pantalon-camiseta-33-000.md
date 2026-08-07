@@ -18,6 +18,9 @@ colores:
   - nombre: "Color 4"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-pantalon-camiseta-33-000/a02e7300-3117-4612-956d-65ddb641a16e.jpg"
+tallasDisponibles: ["S", "M", "L"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Pijama Pantalon Camiseta - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

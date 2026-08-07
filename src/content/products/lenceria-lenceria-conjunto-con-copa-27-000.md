@@ -21,6 +21,9 @@ colores:
   - nombre: "Color 5"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-con-copa-27-000/s.jpg"
+tallasDisponibles: ["S", "M", "L"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Conjunto Con Copa - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

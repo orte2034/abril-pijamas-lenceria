@@ -27,6 +27,9 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-victoria-28-000/victoria-encaje/b16ea1ef-750f-44da-bdcd-3e693f8738a8.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Victoria Encaje - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

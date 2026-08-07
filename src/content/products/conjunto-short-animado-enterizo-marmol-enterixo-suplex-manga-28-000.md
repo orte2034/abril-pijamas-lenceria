@@ -21,6 +21,9 @@ colores:
   - nombre: "Color 5"
     hex: "#cccccc"
     imagen: "/web/conjunto-short-animado/enterizo-marmol/enterixo-suplex/manga-28-000/e3d83769-cda9-48ec-88fb-b422bef87f64.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Manga - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

@@ -27,6 +27,9 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/tela-rib-47-000/botones/unnamed.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Botones - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

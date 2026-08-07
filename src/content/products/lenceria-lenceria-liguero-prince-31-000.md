@@ -36,6 +36,9 @@ colores:
   - nombre: "Color 10"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/liguero-prince-31-000/96ae2d90-481b-4220-b0c4-05b8e185693e.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Liguero Prince - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

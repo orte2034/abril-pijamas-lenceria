@@ -15,6 +15,9 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-samanta-30-000/8965e414-bbc4-4288-aa5f-1328572edb5c.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Conjunto Samanta - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

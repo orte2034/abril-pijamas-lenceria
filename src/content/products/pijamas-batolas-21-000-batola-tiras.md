@@ -24,6 +24,9 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/pijamas/batolas-21-000/batola-tiras/b5fcca65-58aa-46c3-bc29-47e1fdc7bd49.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Batola Tiras - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

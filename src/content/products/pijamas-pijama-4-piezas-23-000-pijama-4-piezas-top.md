@@ -12,6 +12,9 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-4-piezas-23-000/pijama-4-piezas-top/whatsapp-image-2026-02-09-at-11.18.56-am.jpeg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Pijama 4 Piezas Top - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

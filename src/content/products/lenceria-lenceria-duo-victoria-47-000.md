@@ -27,6 +27,9 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/duo-victoria-47-000/fcefe5bf-8bc5-4a8f-8c9d-73bf785d12e2.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Duo Victoria - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

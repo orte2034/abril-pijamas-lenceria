@@ -18,6 +18,9 @@ colores:
   - nombre: "Color 4"
     hex: "#cccccc"
     imagen: "/web/lenceria/babydoll/lola-29-000/9e736ee0-ea99-4afa-bea9-08a1a31c2ab0.jpg"
+tallasDisponibles: ["M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Lola - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

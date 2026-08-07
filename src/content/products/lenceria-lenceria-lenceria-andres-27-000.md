@@ -27,6 +27,9 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/lenceria-andres-27-000/de99739f-c7f8-4e59-91c1-59bda547ed9a.jpg"
+tallasDisponibles: ["S", "M", "L"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Lenceria Andres - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

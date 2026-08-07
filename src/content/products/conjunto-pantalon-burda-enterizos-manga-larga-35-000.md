@@ -15,6 +15,9 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/enterizos/manga-larga-35-000/c8f8e904-e3ed-46e2-a0a2-5ed9a99e352c.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Manga Larga - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

@@ -12,6 +12,9 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-monos-liguero-27-000/fa140bd1-366b-46e3-9c5a-c58611c96c11.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Conjunto Monos Liguero - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

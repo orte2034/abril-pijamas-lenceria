@@ -9,6 +9,9 @@ colores:
   - nombre: "Color 1"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/cachetero-8-000/l-xl.jpg"
+tallasDisponibles: ["S", "M"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Cachetero - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

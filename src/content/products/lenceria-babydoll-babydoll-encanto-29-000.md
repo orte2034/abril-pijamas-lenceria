@@ -42,6 +42,9 @@ colores:
   - nombre: "Color 12"
     hex: "#cccccc"
     imagen: "/web/lenceria/babydoll/babydoll-encanto-29-000/7-sm-3-lxl.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Babydoll Encanto - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

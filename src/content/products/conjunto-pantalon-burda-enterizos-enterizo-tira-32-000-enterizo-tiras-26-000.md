@@ -24,6 +24,9 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32-000/enterizo-tiras-26-000/dd789b40-8a42-4588-8b68-341ba1cfb7e2.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Enterizo Tiras - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

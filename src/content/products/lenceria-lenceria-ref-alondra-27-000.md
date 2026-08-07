@@ -24,6 +24,9 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/ref-alondra-27-000/9-sm-6-lxl.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Ref Alondra - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

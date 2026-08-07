@@ -15,6 +15,9 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/pijamas/plus-pantalon/3-piezas-49-000/cace282e-e059-43f2-8572-aa18b7100d48.jpg"
+tallasDisponibles: [""]
+tallaUnica: false
+tallasConsultar: true
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   3 Piezas - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

@@ -24,6 +24,9 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/lenceria/babydoll/babydoll-anita-28000/trio/90ac95ac-7eb1-4afc-9f2c-4dc73f31fd01.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Trio - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

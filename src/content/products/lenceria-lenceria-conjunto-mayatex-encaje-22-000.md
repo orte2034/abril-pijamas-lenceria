@@ -12,6 +12,9 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-mayatex-encaje-22-000/2.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Conjunto Mayatex Encaje - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

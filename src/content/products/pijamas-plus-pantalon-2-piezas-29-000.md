@@ -12,6 +12,9 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/pijamas/plus-pantalon/2-piezas-29-000/cdbe426a-e534-4650-b3ee-c09dc6c246de.jpg"
+tallasDisponibles: [""]
+tallaUnica: false
+tallasConsultar: true
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   2 Piezas - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

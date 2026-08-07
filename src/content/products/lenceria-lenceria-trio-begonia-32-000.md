@@ -42,6 +42,9 @@ colores:
   - nombre: "Color 12"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/trio-begonia-32-000/fb5d3554-8c4f-477e-bdd0-fb03b2c577f7.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Trio Begonia - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

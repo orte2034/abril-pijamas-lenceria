@@ -15,6 +15,9 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/pijamas/4-piezas-32-000/cb4b4771-709c-4b67-ba92-95a44fc835d5.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   4 Piezas - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

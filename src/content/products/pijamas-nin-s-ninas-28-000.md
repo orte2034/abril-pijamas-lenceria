@@ -42,6 +42,9 @@ colores:
   - nombre: "Color 12"
     hex: "#cccccc"
     imagen: "/web/pijamas/nin-s/ninas-28-000/6-8.jpg"
+tallasDisponibles: [""]
+tallaUnica: false
+tallasConsultar: true
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Ninas - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

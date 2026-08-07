@@ -24,6 +24,9 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/lenceria/babydoll/duo-hada-30-000/d30b8b1d-e64f-4a05-b338-55030aad47ac.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Duo Hada - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

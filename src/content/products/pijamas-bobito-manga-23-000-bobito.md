@@ -39,6 +39,9 @@ colores:
   - nombre: "Color 11"
     hex: "#cccccc"
     imagen: "/web/pijamas/bobito-manga-23-000/bobito/gemini_generated_image_o2wn8qo2wn8qo2wn.png"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Bobito - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

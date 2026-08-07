@@ -21,6 +21,9 @@ colores:
   - nombre: "Color 5"
     hex: "#cccccc"
     imagen: "/web/pijamas/trio-pantalon-29-000/f60528b8-9208-428e-a7f1-c7db00abddea.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Trio Pantalon - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

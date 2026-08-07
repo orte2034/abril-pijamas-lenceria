@@ -4,34 +4,61 @@ import { buildTallasWhatsAppLink } from '@data/site';
 
 export interface Props {
   nombre: string;
-  tallas: string[];
+  tallas: string[];           // tallas por defecto (XS, S, M, L, XL)
+  tallasDisponibles?: string[]; // tallas específicas del producto
+  tallaUnica?: boolean;
+  tallasConsultar?: boolean;
 }
-const { nombre, tallas } = Astro.props;
+const { nombre, tallas, tallasDisponibles, tallaUnica = false, tallasConsultar = false } = Astro.props;
 const waLink = buildTallasWhatsAppLink(nombre);
+
+// Determinar qué tallas mostrar
+const tallasAMostrar = tallasDisponibles && tallasDisponibles.length > 0 ? tallasDisponibles : tallas;
+const hayTallasDisponibles = tallasDisponibles && tallasDisponibles.length > 0;
 ---
 
 <div>
-  <div class="flex flex-wrap gap-3">
-    {tallas.map((talla) => (
-      <span
-        class="inline-flex items-center justify-center min-w-[2.75rem] h-11 px-3 border border-ink/30 text-sm text-ink cursor-pointer hover:border-burgundy hover:text-burgundy transition"
-        data-talla={talla}
+  {tallaUnica ? (
+    <div class="inline-flex items-center justify-center min-w-[2.75rem] h-11 px-3 border border-ink/30 text-sm text-ink bg-creamwarm font-medium">
+      Talla Única
+    </div>
+  ) : tallasConsultar ? (
+    <p class="text-xs text-ink/60 mt-2">
+      {t('producto.tallaConsultar')},{' '}
+      <a
+        href={waLink}
+        target="_blank"
+        rel="noopener"
+        class="text-burgundy underline hover:no-underline font-medium"
       >
-        {talla}
-      </span>
-    ))}
-  </div>
-  <p class="mt-4 text-xs text-ink/60">
-    {t('producto.tallaConsultar')},{' '}
-    <a
-      href={waLink}
-      target="_blank"
-      rel="noopener"
-      class="text-burgundy underline hover:no-underline font-medium"
-    >
-      {t('producto.tallaConsultarWA')} →
-    </a>
-  </p>
+        {t('producto.tallaConsultarWA')} →
+      </a>
+    </p>
+  ) : (
+    <>
+      <div class="flex flex-wrap gap-3">
+        {tallasAMostrar.map((talla) => (
+          <span
+            class="inline-flex items-center justify-center min-w-[2.75rem] h-11 px-3 border border-ink/30 text-sm text-ink cursor-pointer hover:border-burgundy hover:text-burgundy transition"
+            data-talla={talla}
+          >
+            {talla}
+          </span>
+        ))}
+      </div>
+      <p class="mt-4 text-xs text-ink/60">
+        {t('producto.tallaConsultar')},{' '}
+        <a
+          href={waLink}
+          target="_blank"
+          rel="noopener"
+          class="text-burgundy underline hover:no-underline font-medium"
+        >
+          {t('producto.tallaConsultarWA')} →
+        </a>
+      </p>
+    </>
+  )}
 </div>
 
 <script is:inline>

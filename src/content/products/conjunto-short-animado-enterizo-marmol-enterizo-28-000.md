@@ -39,6 +39,9 @@ colores:
   - nombre: "Color 11"
     hex: "#cccccc"
     imagen: "/web/conjunto-short-animado/enterizo-marmol/enterizo-28-000/gemini_generated_image_sgfjyisgfjyisgfj.png"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Enterizo - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

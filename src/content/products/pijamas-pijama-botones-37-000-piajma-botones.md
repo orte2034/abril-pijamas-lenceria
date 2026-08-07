@@ -33,6 +33,9 @@ colores:
   - nombre: "Color 9"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-botones-37-000/piajma-botones/b979f5fa-8634-44eb-97ee-07cc1783f0ff.jpg"
+tallasDisponibles: ["S", "M", "L"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Piajma Botones - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

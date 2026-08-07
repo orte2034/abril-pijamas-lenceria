@@ -9,6 +9,9 @@ colores:
   - nombre: "Color 1"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/tanga-hilo-9-000/9eacfe16-812c-44af-b9a1-cf4dbeec7a40.jpg"
+tallasDisponibles: ["Ãšnica"]
+tallaUnica: true
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Tanga Hilo - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

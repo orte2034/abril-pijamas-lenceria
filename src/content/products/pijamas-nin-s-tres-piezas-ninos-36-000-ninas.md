@@ -27,6 +27,9 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/pijamas/nin-s/tres-piezas-ninos-36-000/ninas/75bd0a8b-92eb-4618-b725-8de4fef7ba40.jpg"
+tallasDisponibles: [""]
+tallaUnica: false
+tallasConsultar: true
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Ninas - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

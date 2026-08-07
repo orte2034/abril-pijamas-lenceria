@@ -21,6 +21,9 @@ colores:
   - nombre: "Color 5"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/flor-de-loto-25-000/4-sm-4-lxl.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Flor De Loto - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

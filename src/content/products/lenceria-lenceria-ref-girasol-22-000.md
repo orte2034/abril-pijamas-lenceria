@@ -60,6 +60,9 @@ colores:
   - nombre: "Color 18"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/ref-girasol-22-000/9-sm-8-lxl.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Ref Girasol - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

@@ -36,6 +36,9 @@ colores:
   - nombre: "Color 10"
     hex: "#cccccc"
     imagen: "/web/lenceria/babydoll/babydoll-clasico-mayatex-26-000/a4de9692-6df7-4784-867c-3e7bf992dd6b.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Babydoll Clasico Mayatex - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

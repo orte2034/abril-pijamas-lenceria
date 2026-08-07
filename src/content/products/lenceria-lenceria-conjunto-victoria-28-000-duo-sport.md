@@ -33,6 +33,9 @@ colores:
   - nombre: "Color 9"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-victoria-28-000/duo-sport/dd9ace89-d80a-4b79-915f-e56a13401df9.jpg"
+tallasDisponibles: ["S", "M", "L", "XL"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Duo Sport - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

@@ -21,6 +21,9 @@ colores:
   - nombre: "Color 5"
     hex: "#cccccc"
     imagen: "/web/lenceria/babydoll/babydol-tanga-29-000/6-sm-4-lxl.jpg"
+tallasDisponibles: [""]
+tallaUnica: false
+tallasConsultar: true
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Babydol Tanga - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.

@@ -24,6 +24,9 @@ const products = defineCollection({
       })
     ).min(1),
     tallas: z.array(z.string()).default(['XS', 'S', 'M', 'L', 'XL']),
+    tallasDisponibles: z.array(z.string()).optional(),
+    tallaUnica: z.boolean().default(false),
+    tallasConsultar: z.boolean().default(false),
     descripcion_es: z.string().default(''),
     descripcion_en: z.string().default(''),
   }),

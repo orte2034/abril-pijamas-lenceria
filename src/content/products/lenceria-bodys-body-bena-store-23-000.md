@@ -21,6 +21,9 @@ colores:
   - nombre: "Color 5"
     hex: "#cccccc"
     imagen: "/web/lenceria/bodys/body-bena-store-23-000/7a9468a8-fb7a-48b5-b654-78cfaa0d74ea.jpg"
+tallasDisponibles: ["S", "M"]
+tallaUnica: false
+tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   Body Bena Store - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.
