@@ -1,28 +1,33 @@
 ﻿---
 nombre: "PIJAMA 4 PIEZAS"
 categoria: pijamas
+
 coleccion: "Coleccion 2026"
 precio: 23000
 destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/PIJAMAS/PIJAMA 4 PIEZAS $23.000/1033b8bf-3d41-4aed-9bf3-af9512394834.jpg"
+    imagen: "/web/web/pijamas/bluson-3-piezas-39.000/112eb05b-225d-4944-b51f-5c7490a38974.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/PIJAMAS/PIJAMA 4 PIEZAS $23.000/a44d465f-1354-484f-a716-a91b2b494fe4.jpg"
+    imagen: "/web/web/pijamas/bluson-3-piezas-39.000/2ab6a5cc-e7a1-44d5-8f06-756eee0c9036.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/PIJAMAS/PIJAMA 4 PIEZAS $23.000/ba6de773-730b-483b-8e2c-a347214d3e80.jpg"
+    imagen: "/web/web/pijamas/bluson-3-piezas-39.000/4a823914-cc5b-4164-abee-93cb6e3f206d.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/PIJAMAS/PIJAMA 4 PIEZAS $23.000/dab33627-ed5e-437b-bc55-d95b570f8cc7.jpg"
+    imagen: "/web/web/pijamas/bluson-3-piezas-39.000/87255422-8ecd-4646-82a4-29884317acbf.jpg"
   - nombre: "Color 5"
     hex: "#cccccc"
-    imagen: "/web/web/PIJAMAS/PIJAMA 4 PIEZAS $23.000/f6e72669-a83c-4e34-9940-1db9b2e0d76a.jpg"
+    imagen: "/web/web/pijamas/bluson-3-piezas-39.000/89f98ef8-5a5f-449f-8948-944fee87d911.jpg"
+  - nombre: "Color 6"
+    hex: "#cccccc"
+    imagen: "/web/web/pijamas/bluson-3-piezas-39.000/fed48716-3945-4bd1-990b-6028c69bbbe0.jpg"
+
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
-  PIJAMA 4 PIEZAS - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.
+  PIJAMA 4 PIEZAS - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.
 descripcion_en: |
   PIJAMA 4 PIEZAS - piece designed in Colombia by Abril Pijamas and Lingerie. Soft fabrics, careful finishes.
 ---

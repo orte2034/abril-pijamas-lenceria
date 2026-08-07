@@ -1,25 +1,27 @@
 ﻿---
 nombre: "JOGER BURDA"
 categoria: conjuntos
+
 coleccion: "Coleccion 2026"
 precio: 38000
 destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/CONJUNTO PANTALON BURDA/JOGER BURDA $38.000/1637b729-97fe-4cd7-93b6-5a23999fc838.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/joger-burda-38.000/1637b729-97fe-4cd7-93b6-5a23999fc838.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/CONJUNTO PANTALON BURDA/JOGER BURDA $38.000/57cf9e2b-8abd-431b-bef7-3c52e689caaf.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/joger-burda-38.000/57cf9e2b-8abd-431b-bef7-3c52e689caaf.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/CONJUNTO PANTALON BURDA/JOGER BURDA $38.000/8434a80f-4b48-47a9-9883-d35aaba65ae9.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/joger-burda-38.000/8434a80f-4b48-47a9-9883-d35aaba65ae9.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/CONJUNTO PANTALON BURDA/JOGER BURDA $38.000/867519a1-d225-4e8e-8a8b-830a8da44493.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/joger-burda-38.000/867519a1-d225-4e8e-8a8b-830a8da44493.jpg"
+
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
-  JOGER BURDA - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.
+  JOGER BURDA - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.
 descripcion_en: |
   JOGER BURDA - piece designed in Colombia by Abril Pijamas and Lingerie. Soft fabrics, careful finishes.
 ---

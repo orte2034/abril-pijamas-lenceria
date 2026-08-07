@@ -8,19 +8,20 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/BABYDOLL/BATOLA $30.000/4 SM 4 L.jpg"
+    imagen: "/web/web/lenceria/babydoll/batola-30.000/4-sm-4-l.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/BABYDOLL/BATOLA $30.000/5 SM  3 L (1).jpg"
+    imagen: "/web/web/lenceria/babydoll/batola-30.000/5-sm-3-l-1-.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/BABYDOLL/BATOLA $30.000/5 SM  3 L (2).jpg"
+    imagen: "/web/web/lenceria/babydoll/batola-30.000/5-sm-3-l-2-.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/BABYDOLL/BATOLA $30.000/5 SM  4 L.jpg"
+    imagen: "/web/web/lenceria/babydoll/batola-30.000/5-sm-4-l.jpg"
+
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
-  BATOLA - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.
+  BATOLA - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.
 descripcion_en: |
   BATOLA - piece designed in Colombia by Abril Pijamas and Lingerie. Soft fabrics, careful finishes.
 ---

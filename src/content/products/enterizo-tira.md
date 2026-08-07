@@ -1,22 +1,33 @@
 ﻿---
 nombre: "ENTERIZO TIRA"
 categoria: conjuntos
+
 coleccion: "Coleccion 2026"
 precio: 32000
 destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/CONJUNTO PANTALON BURDA/ENTERIZOS/ENTERIZO TIRA $32.000/7f0210d8-fe81-448f-8542-28089381cbb0.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32.000/enterizo-tiras-26.000/206837db-5ac8-4f6e-995b-a6acbf9ef4de.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/CONJUNTO PANTALON BURDA/ENTERIZOS/ENTERIZO TIRA $32.000/8cdb8e83-ded1-4d4e-a554-6181199ba548.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32.000/enterizo-tiras-26.000/20729789-e399-4bb8-81fb-5db12c08c77e.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/CONJUNTO PANTALON BURDA/ENTERIZOS/ENTERIZO TIRA $32.000/e10c43f3-85b6-4906-9ac7-a3f8f3d72bfc.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32.000/enterizo-tiras-26.000/4772d7bf-1905-40de-ac73-ccbfa9c7689c.jpg"
+  - nombre: "Color 4"
+    hex: "#cccccc"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32.000/enterizo-tiras-26.000/b2d55d30-53cf-4a0c-a6b8-f75ae2494905.jpg"
+  - nombre: "Color 5"
+    hex: "#cccccc"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32.000/enterizo-tiras-26.000/ceb19ea5-7bd7-4ba2-99ff-e427820f0f0d.jpg"
+  - nombre: "Color 6"
+    hex: "#cccccc"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32.000/enterizo-tiras-26.000/dd789b40-8a42-4588-8b68-341ba1cfb7e2.jpg"
+
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
-  ENTERIZO TIRA - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.
+  ENTERIZO TIRA - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.
 descripcion_en: |
   ENTERIZO TIRA - piece designed in Colombia by Abril Pijamas and Lingerie. Soft fabrics, careful finishes.
 ---

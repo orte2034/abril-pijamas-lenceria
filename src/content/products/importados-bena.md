@@ -8,28 +8,29 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/LENCERIA/IMPORTADOS  BENA $20.000/1 S 3 M  3 L  (1).jpg"
+    imagen: "/web/web/lenceria/lenceria/importados-bena-20.000/1-s-3-m-3-l-1-.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/LENCERIA/IMPORTADOS  BENA $20.000/1 S 3 M  3 L  (2).jpg"
+    imagen: "/web/web/lenceria/lenceria/importados-bena-20.000/1-s-3-m-3-l-2-.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/LENCERIA/IMPORTADOS  BENA $20.000/1 S.jpg"
+    imagen: "/web/web/lenceria/lenceria/importados-bena-20.000/1-s.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/LENCERIA/IMPORTADOS  BENA $20.000/1M  7  LXL  (2).jpg"
+    imagen: "/web/web/lenceria/lenceria/importados-bena-20.000/1m-7-lxl-2-.jpg"
   - nombre: "Color 5"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/LENCERIA/IMPORTADOS  BENA $20.000/1M  7  LXL  (3).jpg"
+    imagen: "/web/web/lenceria/lenceria/importados-bena-20.000/1m-7-lxl-3-.jpg"
   - nombre: "Color 6"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/LENCERIA/IMPORTADOS  BENA $20.000/2 S  2 M 4 L  (1).jpg"
+    imagen: "/web/web/lenceria/lenceria/importados-bena-20.000/2-s-2-m-4-l-1-.jpg"
   - nombre: "Color 7"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/LENCERIA/IMPORTADOS  BENA $20.000/2 S  2 M 4 L  (2).jpg"
+    imagen: "/web/web/lenceria/lenceria/importados-bena-20.000/2-s-2-m-4-l-2-.jpg"
+
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
-  IMPORTADOS BENA - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.
+  IMPORTADOS BENA - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado.
 descripcion_en: |
   IMPORTADOS BENA - piece designed in Colombia by Abril Pijamas and Lingerie. Soft fabrics, careful finishes.
 ---
