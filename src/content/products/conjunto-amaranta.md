@@ -1,0 +1,24 @@
+﻿---
+nombre: "CONJUNTO AMARANTA"
+categoria: lenceria
+subtipo: clasica
+coleccion: "Coleccion 2026"
+precio: 20000
+destacado: false
+colores:
+  - nombre: "Color 1"
+    hex: "#cccccc"
+    imagen: "/public/web/web/LENCERIA/LENCERIA/CONJUNTO AMARANTA  $20.000/1 SM.jpg"
+  - nombre: "Color 2"
+    hex: "#cccccc"
+    imagen: "/public/web/web/LENCERIA/LENCERIA/CONJUNTO AMARANTA  $20.000/2 SM.jpg"
+tallas: ["XS", "S", "M", "L", "XL"]
+descripcion_es: |
+  CONJUNTO AMARANTA - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.
+descripcion_en: |
+  CONJUNTO AMARANTA - piece designed in Colombia by Abril Pijamas and Lingerie. Soft fabrics, careful finishes.
+---
+
+# CONJUNTO AMARANTA
+
+Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.

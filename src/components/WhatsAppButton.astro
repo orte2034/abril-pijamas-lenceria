@@ -1,0 +1,31 @@
+---
+import { buildWhatsAppLink } from '@data/site';
+import { t } from '@i18n/index';
+
+export interface Props {
+  nombre: string;
+  color?: string;
+  talla?: string;
+  coleccion?: string;
+  variant?: 'primary' | 'ghost';
+}
+const { nombre, color, talla, coleccion, variant = 'primary' } = Astro.props;
+const link = buildWhatsAppLink(nombre, color, talla, coleccion);
+---
+
+<a
+  href={link}
+  target="_blank"
+  rel="noopener"
+  data-whatsapp-link
+  data-producto={nombre}
+  class:list={[
+    'inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm tracking-wider uppercase transition',
+    variant === 'primary'
+      ? 'bg-burgundy text-crema hover:bg-burgundy-900'
+      : 'border border-ink/30 text-ink hover:border-burgundy hover:text-burgundy',
+  ]}
+>
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.492 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.59 5.452 1.59 5.448 0 9.886-4.434 9.889-9.885a9.86 9.86 0 00-2.893-7.005A9.79 9.79 0 0012.055 2.5c-5.45 0-9.887 4.434-9.89 9.884a9.85 9.85 0 001.599 5.392l-.999 3.648 3.832-.494z"/></svg>
+  {t('producto.addToWhatsApp')}
+</a>

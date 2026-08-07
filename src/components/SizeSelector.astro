@@ -1,0 +1,70 @@
+---
+import { t } from '@i18n/index';
+import { buildTallasWhatsAppLink } from '@data/site';
+
+export interface Props {
+  nombre: string;
+  tallas: string[];
+}
+const { nombre, tallas } = Astro.props;
+const waLink = buildTallasWhatsAppLink(nombre);
+---
+
+<div>
+  <div class="flex flex-wrap gap-3">
+    {tallas.map((talla) => (
+      <span
+        class="inline-flex items-center justify-center min-w-[2.75rem] h-11 px-3 border border-ink/30 text-sm text-ink cursor-pointer hover:border-burgundy hover:text-burgundy transition"
+        data-talla={talla}
+      >
+        {talla}
+      </span>
+    ))}
+  </div>
+  <p class="mt-4 text-xs text-ink/60">
+    {t('producto.tallaConsultar')},{' '}
+    <a
+      href={waLink}
+      target="_blank"
+      rel="noopener"
+      class="text-burgundy underline hover:no-underline font-medium"
+    >
+      {t('producto.tallaConsultarWA')} →
+    </a>
+  </p>
+</div>
+
+<script is:inline>
+  document.addEventListener('click', (e) => {
+    const size = (e.target instanceof HTMLElement) ? e.target.closest('[data-talla]') : null;
+    if (!size) return;
+    const card = size.closest('[data-product-card]');
+    if (!card) return;
+    card.querySelectorAll('[data-talla]').forEach((t) =>
+      t.classList.remove('border-burgundy','text-burgundy','bg-burgundy/5')
+    );
+    size.classList.add('border-burgundy','text-burgundy','bg-burgundy/5');
+    const marker = card.querySelector('[data-talla-selected]');
+    if (marker) marker.textContent = size.textContent;
+    const wa = card.querySelector('[data-whatsapp-link]');
+    if (wa) {
+      const ruta = wa.getAttribute('href') || '';
+      const textIdx = ruta.indexOf('text=');
+      if (textIdx > 0) {
+        const base = ruta.substring(0, textIdx);
+        const producto = card.getAttribute('data-nombre') || '';
+        const coleccion = card.getAttribute('data-coleccion') || '';
+        const colorEl = card.querySelector('[data-color-name]');
+        const color = colorEl ? colorEl.textContent : '';
+        const talla = size.textContent || '';
+        const lines = ['Hola Abril Pijamas y Lencería, me interesa una prenda de su catálogo.'];
+        if (producto) lines.push('Pieza: ' + producto);
+        if (coleccion) lines.push('Colección: ' + coleccion);
+        if (color) lines.push('Color: ' + color);
+        if (talla) lines.push('Talla: ' + talla);
+        lines.push('¿Está disponible? Gracias.');
+        wa.setAttribute('href', base + 'text=' + encodeURIComponent(lines.join('\n')));
+      }
+    }
+  });
+</script>

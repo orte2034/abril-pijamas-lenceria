@@ -1,0 +1,64 @@
+---
+import { formatCOP, t } from '@i18n/index';
+import ColorSelector from '@components/ColorSelector.astro';
+
+export interface Props {
+  product: any;
+}
+const { product } = Astro.props;
+const { data, slug } = product;
+const firstColor = data.colores[0];
+const coleccion = data.coleccion || 'Colección 2026';
+const categoria = data.categoria;
+const subtipo = data.subtipo;
+---
+
+<article
+  class="reveal group cursor-pointer"
+  data-product-card
+  data-slug={slug}
+  data-nombre={data.nombre}
+  data-coleccion={coleccion}
+  data-categoria={categoria}
+  data-subtipo={subtipo}
+>
+  <a href={`/producto/${slug}`} class="block" aria-label={`Ver ${data.nombre}`}>
+    <div class="relative aspect-[3/4] overflow-hidden bg-creamwarm rounded-sm">
+      <img
+        data-product-image
+        src={firstColor.imagen}
+        alt={`${data.nombre} ${firstColor.nombre}`}
+        class="w-full h-full object-cover transition-all duration-500 ease-editorial group-hover:scale-[1.03]"
+        loading="lazy"
+      />
+      <div class="absolute top-3 left-3">
+        <span class="eyebrow bg-crema/90 px-2.5 py-1">{coleccion}</span>
+      </div>
+      {subtipo && subtipo !== 'clasica' && (
+        <div class="absolute top-3 right-3">
+          <span class="eyebrow bg-burgundy/90 text-crema px-2.5 py-1 capitalize">{subtipo}</span>
+        </div>
+      )}
+    </div>
+
+    <div class="mt-4 flex items-baseline justify-between">
+      <h3 class="font-serif text-lg text-ink">{data.nombre}</h3>
+      <span class="text-sm text-ink/70">{formatCOP(data.precio)}</span>
+    </div>
+
+    {data.colores.length > 1 && (
+      <p class="mt-1 text-xs text-ink/60">{data.colores.length} {t('producto.colores').toLowerCase()} · <span data-color-name>{firstColor.nombre}</span></p>
+    )}
+    {data.colores.length === 1 && (
+      <p class="mt-1 text-xs text-ink/60 capitalize">{categoria}{subtipo && subtipo !== 'clasica' ? ` · ${subtipo}` : ''}</p>
+    )}
+
+    {data.colores.length > 1 && (
+      <div class="mt-3 [&>[data-color-selector]]:scale-90 [&>[data-color-selector]]:origin-left">
+        <ColorSelector colores={data.colores} selected={firstColor.nombre} id={`card-${slug}`} />
+      </div>
+    )}
+  </a>
+
+  <span class="hidden" data-talla-selected></span>
+</article>

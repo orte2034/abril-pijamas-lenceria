@@ -1,0 +1,80 @@
+---
+export interface Props {
+  colores: { nombre: string; hex: string; imagen: string }[];
+  selected: string;
+  id: string;
+}
+
+const { colores, selected, id } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-2" data-color-selector={id}>
+  {colores.map((c, i) => {
+    const isSelected = i === 0;
+    return (
+      <button
+        type="button"
+        class:list={[
+          'relative w-9 h-9 rounded-full border transition overflow-hidden',
+          isSelected ? 'ring-2 ring-burgundy/30 border-burgundy border-2' : 'border-ink/20 hover:border-ink/50',
+        ]}
+        style={c.hex && c.hex !== '#cccccc' ? `background-color: ${c.hex};` : ''}
+        data-color={c.nombre}
+        data-image={c.imagen}
+        data-idx={i}
+        aria-label={c.nombre}
+        aria-pressed={isSelected}
+        title={c.nombre}
+      >
+        {c.hex === '#cccccc' && (
+          <img src={c.imagen} alt={c.nombre} class="w-full h-full object-cover" loading="lazy" />
+        )}
+      </button>
+    );
+  })}
+</div>
+
+<script is:inline>
+  document.addEventListener('click', (e) => {
+    const btn = (e.target instanceof HTMLElement) ? e.target.closest('[data-color]') : null;
+    if (!btn) return;
+    const parent = btn.closest('[data-color-selector]');
+    if (!parent) return;
+    const card = btn.closest('[data-product-card]');
+    if (!card) return;
+    parent.querySelectorAll('[data-color]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+    parent.querySelectorAll('[data-color]').forEach((b) => b.classList.remove('border-burgundy','border-2','ring-2','ring-burgundy/30'));
+    btn.setAttribute('aria-pressed', 'true');
+    btn.classList.add('border-burgundy','border-2','ring-2','ring-burgundy/30');
+    const img = card.querySelector('[data-product-image]');
+    if (img) {
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = btn.getAttribute('data-image') || img.src;
+        img.style.opacity = '1';
+      }, 180);
+    }
+    const name = card.querySelector('[data-color-name]');
+    if (name) name.textContent = btn.getAttribute('data-color') || '';
+    const wa = card.querySelector('[data-whatsapp-link]');
+    if (wa) {
+      const ruta = wa.getAttribute('href') || '';
+      const textIdx = ruta.indexOf('text=');
+      if (textIdx > 0) {
+        const base = ruta.substring(0, textIdx);
+        const producto = card.getAttribute('data-nombre') || '';
+        const coleccion = card.getAttribute('data-coleccion') || '';
+        const color = btn.getAttribute('data-color') || '';
+        const tallaEl = card.querySelector('[data-talla-selected]');
+        const talla = tallaEl ? tallaEl.textContent : '';
+        const lines = ['Hola Abril Pijamas y Lencería, me interesa una prenda de su catálogo.'];
+        if (producto) lines.push('Pieza: ' + producto);
+        if (coleccion) lines.push('Colección: ' + coleccion);
+        if (color) lines.push('Color: ' + color);
+        if (talla) lines.push('Talla: ' + talla);
+        lines.push('¿Está disponible? Gracias.');
+        wa.setAttribute('href', base + 'text=' + encodeURIComponent(lines.join('\n')));
+      }
+    }
+  });
+</script>

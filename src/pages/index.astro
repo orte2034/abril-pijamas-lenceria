@@ -1,0 +1,69 @@
+---
+import Base from '@layouts/Base.astro';
+import ProductCard from '@components/ProductCard.astro';
+import { t } from '@i18n/index';
+import { getCollection } from 'astro:content';
+
+const products = await getCollection('products');
+const destacados = products.filter((p) => p.data.destacado);
+const preview = (destacados.length > 0 ? destacados : products).slice(0, 8);
+---
+
+<Base title="Abril Pijamas y Lencería · Hecho en Colombia">
+  <section class="container-edit pt-20 pb-32">
+    <div class="reveal flex justify-center mb-16">
+      <div class="relative">
+        <div class="absolute inset-0 -m-12 rounded-full bg-rosa-polvo/40 blur-3xl scale-125"></div>
+        <div class="absolute inset-0 -m-6 rounded-full bg-burgundy/10 blur-2xl"></div>
+        <img
+          src="/logo.jpeg"
+          alt="Abril Pijamas y Lencería — logo de marca"
+          class="relative h-64 w-64 md:h-96 md:w-96 object-cover rounded-full ring-1 ring-ink/15 shadow-2xl shadow-rosa-polvo/40 transition-transform duration-700 hover:scale-[1.03]"
+          width="384"
+          height="384"
+        />
+      </div>
+    </div>
+    <p class="eyebrow reveal text-center text-sm">{t('hero.eyebrow')}</p>
+    <h1 class="reveal mt-6 font-serif text-display-xl font-light text-ink max-w-content text-center">
+      {t('hero.title')}
+    </h1>
+    <p class="reveal mt-8 text-lead text-ink/75 max-w-editorial mx-auto text-center">
+      {t('hero.subtitle')}
+    </p>
+    <div class="reveal mt-12 flex items-center justify-center gap-6 flex-wrap">
+      <a href="/catalogo" class="inline-flex items-center gap-3 px-8 py-4 bg-burgundy text-crema text-sm tracking-wider uppercase hover:bg-burgundy-900 transition">
+        {t('hero.cta')}
+      </a>
+      <span class="text-xs text-ink/50 tracking-wider uppercase">{t('hero.scroll')} ↓</span>
+    </div>
+  </section>
+
+  <section class="container-edit py-16 border-t border-ink/10">
+    <div class="flex items-baseline justify-between mb-12 flex-wrap gap-2">
+      <h2 class="font-serif text-3xl md:text-4xl text-ink">{t('nav.catalogo')}</h2>
+      <a href="/catalogo" class="text-xs tracking-wider uppercase text-burgundy hover:underline">{t('catalogo.verTodo')} →</a>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+      {preview.map((p) => <ProductCard product={p} />)}
+    </div>
+  </section>
+
+  <section class="container-edit py-24 border-t border-ink/10 mt-16">
+    <div class="grid md:grid-cols-3 gap-8 text-sm">
+      <div class="reveal">
+        <p class="eyebrow mb-3">Hecho en Colombia</p>
+        <p class="text-ink/80">Diseñado y cosido en pequeñas series, con tejidos suaves y cuidado del detalle.</p>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow mb-3">Atención directa</p>
+        <p class="text-ink/80">Consultas por WhatsApp — te respondemos con tallas, disponibilidad y envíos.</p>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow mb-3">Envíos a todo el país</p>
+        <p class="text-ink/80">Despachamos a cualquier ciudad de Colombia. Coordinamos contigo por WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+</Base>

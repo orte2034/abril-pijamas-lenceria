@@ -1,0 +1,179 @@
+---
+import Base from '@layouts/Base.astro';
+import ProductCard from '@components/ProductCard.astro';
+import { t } from '@i18n/index';
+import { getCollection } from 'astro:content';
+
+const products = await getCollection('products');
+const allColors = Array.from(new Set(products.flatMap((p) => p.data.colores.map((c) => c.nombre))));
+const maxPrice = Math.max(...products.map((p) => p.data.precio));
+const cats = ['pijamas', 'lenceria', 'conjuntos'];
+const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
+---
+
+<Base title={`Catálogo · Abril Pijamas y Lencería`}>
+  <section class="container-edit pt-16 pb-12">
+    <p class="eyebrow reveal">{t('hero.eyebrow')}</p>
+    <h1 class="reveal mt-4 font-serif text-display text-ink">{t('catalogo.title')}</h1>
+    <p class="reveal mt-4 text-ink/70"></p>
+  </section>
+
+  <section class="container-edit pb-24" data-catalogo-root>
+    <div class="grid lg:grid-cols-[19rem_1fr] gap-10">
+      <aside class="lg:sticky lg:top-24 self-start space-y-6">
+        <details open class="border-b border-ink/10 pb-5" data-filter-group="categoria">
+          <summary class="eyebrow cursor-pointer flex justify-between">{t('catalogo.filter.categoria')} <span></span></summary>
+          <div class="mt-4 space-y-2">
+            <label class="flex items-center gap-3 text-sm cursor-pointer">
+              <input type="radio" name="categoria" value="" data-filter-cat="" class="accent-burgundy" checked />
+              <span>Todas</span>
+            </label>
+            {cats.map((c) => (
+              <label class="flex items-center gap-3 text-sm cursor-pointer">
+                <input type="radio" name="categoria" value={c} data-filter-cat={c} class="accent-burgundy" />
+                <span class="capitalize">{t('categoria.' + c)}</span>
+              </label>
+            ))}
+          </div>
+        </details>
+
+        <details class="border-b border-ink/10 pb-5" data-filter-group="subtipo">
+          <summary class="eyebrow cursor-pointer flex justify-between">{t('catalogo.filter.subtipo')} <span class="text-ink/40">(lencería)</span></summary>
+          <div class="mt-4 space-y-2">
+            {subtiposLenceria.map((s) => (
+              <label class="flex items-center gap-3 text-sm cursor-pointer">
+                <input type="checkbox" value={s} data-filter-subtipo={s} class="accent-burgundy" />
+                <span class="capitalize">{t('subtipo.' + s)}</span>
+              </label>
+            ))}
+          </div>
+        </details>
+
+        <details class="border-b border-ink/10 pb-5" data-filter-group="precio">
+          <summary class="eyebrow cursor-pointer flex justify-between">{t('catalogo.filter.precio')} <span></span></summary>
+          <div class="mt-4">
+            <input type="range" min="0" max={maxPrice} step="1000" data-price-max value={maxPrice} class="w-full accent-burgundy" />
+            <div class="flex justify-between text-xs mt-2 text-ink/60">
+              <span data-price-min-label>$0</span>
+              <span data-price-max-label>{new Intl.NumberFormat('es-CO').format(maxPrice)}</span>
+            </div>
+          </div>
+        </details>
+
+        <details class="border-b border-ink/10 pb-5" data-filter-group="color">
+          <summary class="eyebrow cursor-pointer">{t('catalogo.filter.color')}</summary>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {allColors.map((nombre) => (
+              <button
+                type="button"
+                data-filter-color={nombre}
+                class="w-7 h-7 rounded-full border border-ink/15 transition"
+                style="background-color: #cccccc"
+                title={nombre}
+                aria-label={nombre}
+              ></button>
+            ))}
+          </div>
+        </details>
+
+        <button data-clear-filters class="text-xs tracking-wider uppercase text-burgundy hover:underline">{t('catalogo.clear')}</button>
+      </aside>
+
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12" data-products-grid>
+        {products.map((p) => (
+          <div data-product-item
+               data-categoria={p.data.categoria}
+               data-subtipo={p.data.subtipo || ''}
+               data-precio={p.data.precio}
+               data-colores={p.data.colores.map((c) => c.nombre).join('|')}>
+            <ProductCard product={p} />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <p class="hidden text-ink/60 text-sm mt-16" data-empty>{t('catalogo.empty')}</p>
+  </section>
+</Base>
+
+<script is:inline define:vars={{ maxPrice }}>
+  const items = Array.from(document.querySelectorAll('[data-product-item]'));
+  const empty = document.querySelector('[data-empty]');
+  const catInputs = Array.from(document.querySelectorAll('[data-filter-cat]'));
+  const subtipoInputs = Array.from(document.querySelectorAll('[data-filter-subtipo]'));
+  const colorBtns = Array.from(document.querySelectorAll('[data-filter-color]'));
+  const priceRange = document.querySelector('[data-price-max]');
+  const priceLabel = document.querySelector('[data-price-max-label]');
+
+  let activeCat = '';
+  let activeSubtipos = new Set();
+  let activeColors = new Set();
+  let maxPriceActive = maxPrice;
+
+  function apply() {
+    let visible = 0;
+    items.forEach((el) => {
+      const cat = el.getAttribute('data-categoria');
+      const sub = el.getAttribute('data-subtipo');
+      const precio = Number(el.getAttribute('data-precio'));
+      const colores = (el.getAttribute('data-colores') || '').split('|');
+      const okCat = !activeCat || activeCat === cat;
+      const okSub = !activeCat || activeCat !== 'lenceria' || activeSubtipos.size === 0 || activeSubtipos.has(sub || 'clasica');
+      const okColor = activeColors.size === 0 || colores.some((c) => activeColors.has(c));
+      const okPrice = precio <= maxPriceActive;
+      if (okCat && okSub && okColor && okPrice) {
+        el.style.display = '';
+        visible++;
+      } else {
+        el.style.display = 'none';
+      }
+    });
+    if (empty) empty.classList.toggle('hidden', visible > 0);
+  }
+
+  catInputs.forEach((c) => c.addEventListener('change', () => {
+    activeCat = c.value;
+    apply();
+  }));
+
+  subtipoInputs.forEach((c) => c.addEventListener('change', () => {
+    if (c.checked) activeSubtipos.add(c.value);
+    else activeSubtipos.delete(c.value);
+    apply();
+  }));
+
+  colorBtns.forEach((b) => b.addEventListener('click', () => {
+    const c = b.getAttribute('data-filter-color');
+    if (activeColors.has(c)) { activeColors.delete(c); b.style.outline = 'none'; }
+    else { activeColors.add(c); b.style.outline = '2px solid #7B2D3F'; b.style.outlineOffset = '2px'; }
+    apply();
+  }));
+
+  if (priceRange) {
+    priceRange.addEventListener('input', () => {
+      maxPriceActive = Number(priceRange.value);
+      if (priceLabel) priceLabel.textContent = new Intl.NumberFormat('es-CO').format(maxPriceActive);
+      apply();
+    });
+  }
+
+  document.querySelector('[data-clear-filters]').addEventListener('click', () => {
+    activeCat = ''; activeSubtipos.clear(); activeColors.clear(); maxPriceActive = maxPrice;
+    catInputs.forEach((c) => c.checked = (c.value === ''));
+    subtipoInputs.forEach((c) => c.checked = false);
+    colorBtns.forEach((b) => b.style.outline = 'none');
+    if (priceRange) { priceRange.value = maxPrice; if (priceLabel) priceLabel.textContent = new Intl.NumberFormat('es-CO').format(maxPrice); }
+    apply();
+  });
+
+  // Hash (#cat=lenceria)
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    const params = new URLSearchParams(hash.replace(/&/g, '&'));
+    const cat = params.get('cat');
+    if (cat && ['pijamas', 'lenceria', 'conjuntos'].includes(cat)) {
+      const input = document.querySelector(`[data-filter-cat="${cat}"]`);
+      if (input) { input.checked = true; activeCat = cat; apply(); }
+    }
+  }
+</script>

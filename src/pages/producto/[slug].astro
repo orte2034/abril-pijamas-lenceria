@@ -1,0 +1,152 @@
+---
+import Base from '@layouts/Base.astro';
+import ColorSelector from '@components/ColorSelector.astro';
+import SizeSelector from '@components/SizeSelector.astro';
+import WhatsAppButton from '@components/WhatsAppButton.astro';
+import ProductCard from '@components/ProductCard.astro';
+import { formatCOP, t } from '@i18n/index';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const products = await getCollection('products');
+  return products.map((p) => ({ params: { slug: p.slug }, props: { product: p } }));
+}
+
+const { product } = Astro.props;
+const { data, slug } = product;
+const firstColor = data.colores[0];
+const coleccion = data.coleccion || 'Colección 2026';
+const allProducts = await getCollection('products');
+const related = allProducts.filter((p) => p.data.categoria === data.categoria && p.slug !== slug).slice(0, 3);
+const ogImage = new URL(firstColor.imagen, Astro.site).toString();
+
+const variantes = [];
+for (const color of data.colores) {
+  for (const talla of data.tallas) {
+    variantes.push({
+      '@type': 'Offer',
+      name: `${color.nombre} · ${talla}`,
+      price: data.precio,
+      priceCurrency: 'COP',
+      sku: `${slug}-${color.nombre}-${talla}`.toLowerCase(),
+      availability: 'https://schema.org/InStock',
+      url: `https://wa.me/573169064533`,
+    });
+  }
+}
+---
+
+<Base title={`${data.nombre} · Abril`} description={data.descripcion_es.slice(0, 160)} ogImage={ogImage}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: data.nombre,
+    description: data.descripcion_es,
+    category: data.categoria,
+    brand: { '@type': 'Brand', name: 'Abril Pijamas y Lencería' },
+    offers: variantes,
+  })} />
+
+  <article class="container-edit pt-12 pb-24" data-product-card data-nombre={data.nombre} data-coleccion={coleccion}>
+    <nav class="text-xs text-ink/50 mb-8">
+      <a href="/" class="hover:text-burgundy">{t('producto.breadcrumb')}</a>
+      <span class="mx-2">/</span>
+      <a href="/catalogo" class="hover:text-burgundy">{t('nav.catalogo')}</a>
+      <span class="mx-2">/</span>
+      <a href={`/catalogo#cat=${data.categoria}`} class="hover:text-burgundy capitalize">{t('categoria.' + data.categoria)}</a>
+      {data.subtipo && data.subtipo !== 'clasica' && (
+        <>
+          <span class="mx-2">/</span>
+          <span class="capitalize">{t('subtipo.' + data.subtipo)}</span>
+        </>
+      )}
+      <span class="mx-2">/</span>
+      <span>{data.nombre}</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+      <div class="relative">
+        <div class="aspect-[3/4] overflow-hidden bg-creamwarm rounded-sm">
+          <img
+            data-product-image
+            src={firstColor.imagen}
+            alt={`${data.nombre} ${firstColor.nombre}`}
+            class="w-full h-full object-cover transition-opacity duration-300"
+          />
+        </div>
+        <span class="absolute top-4 left-4 eyebrow bg-crema/90 px-3 py-1.5">{coleccion}</span>
+        {data.subtipo && data.subtipo !== 'clasica' && (
+          <span class="absolute top-4 right-4 eyebrow bg-burgundy text-crema px-3 py-1.5 capitalize">{data.subtipo}</span>
+        )}
+
+        {data.colores.length > 1 && (
+          <div class="mt-4 grid grid-cols-4 gap-2">
+            {data.colores.slice(0, 8).map((c) => (
+              <div class="aspect-square overflow-hidden rounded-sm bg-creamwarm">
+                <img src={c.imagen} alt={c.nombre} class="w-full h-full object-cover thumbnail" loading="lazy" data-image-url={c.imagen} />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div class="lg:pt-4">
+        <p class="eyebrow">{coleccion}</p>
+        <h1 class="mt-3 font-serif text-4xl md:text-5xl text-ink leading-tight">{data.nombre}</h1>
+        <p class="mt-4 text-2xl text-burgundy">{formatCOP(data.precio)}</p>
+
+        {data.colores.length > 1 && (
+          <section class="mt-10">
+            <p class="eyebrow mb-3">{t('producto.colores')} <span class="text-ink/40 normal-case tracking-normal">· {data.colores.length} opciones</span></p>
+            <ColorSelector colores={data.colores} selected={firstColor.nombre} id={`pd-${slug}`} />
+            <p class="mt-2 text-sm text-ink/70" data-color-name>{firstColor.nombre}</p>
+          </section>
+        )}
+
+        <section class="mt-10">
+          <p class="eyebrow mb-3">{t('producto.tallas')}</p>
+          <SizeSelector nombre={data.nombre} tallas={data.tallas} />
+        </section>
+
+        {data.descripcion_es && (
+          <section class="mt-10 text-lead text-ink/80 italic font-body">
+            {data.descripcion_es}
+          </section>
+        )}
+
+        <div class="mt-10">
+          <WhatsAppButton nombre={data.nombre} coleccion={coleccion} color={firstColor.nombre} />
+        </div>
+
+        <span class="hidden" data-talla-selected></span>
+      </div>
+    </div>
+
+    {related.length > 0 && (
+      <section class="mt-32 pt-16 border-t border-ink/10">
+        <h2 class="font-serif text-3xl text-ink mb-10">{t('producto.relacionados')}</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+          {related.map((p) => <ProductCard product={p} />)}
+        </div>
+      </section>
+    )}
+  </article>
+</Base>
+
+<script is:inline>
+  document.addEventListener('click', (e) => {
+    const t = (e.target instanceof HTMLElement) ? e.target : null;
+    if (!t) return;
+    // Thumbnails gallery on detail page
+    if (t.classList.contains('thumbnail') || t.closest('.thumbnail')) {
+      const thumb = t.classList.contains('thumbnail') ? t : t.closest('.thumbnail');
+      const card = thumb.closest('[data-product-card]');
+      const mainImg = card && card.querySelector('[data-product-image]');
+      const newUrl = thumb.getAttribute('data-image-url');
+      if (mainImg && newUrl) {
+        mainImg.style.opacity = '0';
+        setTimeout(() => { mainImg.src = newUrl; mainImg.style.opacity = '1'; }, 180);
+      }
+    }
+  });
+</script>
