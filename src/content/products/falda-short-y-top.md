@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "FALDA SHORT Y TOP"
 categoria: conjuntos
 coleccion: "Coleccion 2026"
@@ -36,4 +36,3 @@ descripcion_en: |
 # FALDA SHORT Y TOP
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

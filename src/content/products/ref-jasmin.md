@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "REF JASMIN"
 categoria: lenceria
 subtipo: clasica
@@ -28,4 +28,3 @@ descripcion_en: |
 # REF JASMIN
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

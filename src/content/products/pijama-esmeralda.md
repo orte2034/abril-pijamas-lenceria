@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "PIJAMA ESMERALDA"
 categoria: pijamas
 coleccion: "Coleccion 2026"
@@ -39,4 +39,3 @@ descripcion_en: |
 # PIJAMA ESMERALDA
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

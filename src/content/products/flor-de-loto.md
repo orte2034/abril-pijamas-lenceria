@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "FLOR DE LOTO"
 categoria: lenceria
 subtipo: clasica
@@ -31,4 +31,3 @@ descripcion_en: |
 # FLOR DE LOTO
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

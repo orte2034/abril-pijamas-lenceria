@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "YOMPER"
 categoria: conjuntos
 coleccion: "Coleccion 2026"
@@ -33,4 +33,3 @@ descripcion_en: |
 # YOMPER
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

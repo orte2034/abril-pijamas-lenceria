@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "TRIO PANTALON"
 categoria: pijamas
 coleccion: "Coleccion 2026"
@@ -30,4 +30,3 @@ descripcion_en: |
 # TRIO PANTALON
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

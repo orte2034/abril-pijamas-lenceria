@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "CONJUNTO SHORT BURDACAMISETA PIEL DURAZNO"
 categoria: conjuntos
 coleccion: "Coleccion 2026"
@@ -42,4 +42,3 @@ descripcion_en: |
 # CONJUNTO SHORT BURDACAMISETA PIEL DURAZNO
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

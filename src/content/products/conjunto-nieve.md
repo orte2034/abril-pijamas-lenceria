@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "CONJUNTO NIEVE"
 categoria: lenceria
 subtipo: clasica
@@ -37,4 +37,3 @@ descripcion_en: |
 # CONJUNTO NIEVE
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

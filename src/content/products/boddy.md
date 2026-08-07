@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "BODDY"
 categoria: lenceria
 subtipo: bodys
@@ -28,4 +28,3 @@ descripcion_en: |
 # BODDY
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

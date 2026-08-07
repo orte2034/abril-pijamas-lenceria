@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "2 piezas"
 categoria: pijamas
 coleccion: "Coleccion 2026"
@@ -21,4 +21,3 @@ descripcion_en: |
 # Pieza
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

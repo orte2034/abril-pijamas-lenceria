@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "REF LIRIO"
 categoria: lenceria
 subtipo: clasica
@@ -52,4 +52,3 @@ descripcion_en: |
 # REF LIRIO
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

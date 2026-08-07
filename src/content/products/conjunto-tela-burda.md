@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "CONJUNTO TELA BURDA"
 categoria: conjuntos
 coleccion: "Coleccion 2026"
@@ -39,4 +39,3 @@ descripcion_en: |
 # CONJUNTO TELA BURDA
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

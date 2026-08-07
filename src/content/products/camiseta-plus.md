@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "CAMISETA PLUS"
 categoria: pijamas
 coleccion: "Coleccion 2026"
@@ -27,4 +27,3 @@ descripcion_en: |
 # CAMISETA PLUS
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

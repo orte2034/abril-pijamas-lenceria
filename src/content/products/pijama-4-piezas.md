@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "PIJAMA 4 PIEZAS"
 categoria: pijamas
 coleccion: "Coleccion 2026"
@@ -30,4 +30,3 @@ descripcion_en: |
 # PIJAMA 4 PIEZAS
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

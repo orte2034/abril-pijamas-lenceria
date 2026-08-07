@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "CONJUNTO AMARA"
 categoria: lenceria
 subtipo: clasica
@@ -25,4 +25,3 @@ descripcion_en: |
 # CONJUNTO AMARA
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

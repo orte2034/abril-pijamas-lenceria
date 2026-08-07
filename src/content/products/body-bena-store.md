@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "BODY BENA STORE"
 categoria: lenceria
 subtipo: bodys
@@ -31,4 +31,3 @@ descripcion_en: |
 # BODY BENA STORE
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

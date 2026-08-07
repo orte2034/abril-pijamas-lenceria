@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "REF ALONDRA"
 categoria: lenceria
 subtipo: clasica
@@ -34,4 +34,3 @@ descripcion_en: |
 # REF ALONDRA
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

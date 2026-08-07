@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "BLUSON 3 PIEZAS"
 categoria: pijamas
 coleccion: "Coleccion 2026"
@@ -33,4 +33,3 @@ descripcion_en: |
 # BLUSON 3 PIEZAS
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

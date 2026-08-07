@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "BABYDOL TANGA"
 categoria: lenceria
 subtipo: babydoll
@@ -31,4 +31,3 @@ descripcion_en: |
 # BABYDOL TANGA
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-

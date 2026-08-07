@@ -1,4 +1,4 @@
----
+﻿---
 nombre: "REF GIRASOL"
 categoria: lenceria
 subtipo: clasica
@@ -70,4 +70,3 @@ descripcion_en: |
 # REF GIRASOL
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
-
