@@ -8,10 +8,10 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/conjunto-amaranta-20.000/1-sm.jpg"
+    imagen: "/web/web/lenceria/lenceria/conjunto-amaranta-20-000/1-sm.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/conjunto-amaranta-20.000/2-sm.jpg"
+    imagen: "/web/web/lenceria/lenceria/conjunto-amaranta-20-000/2-sm.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

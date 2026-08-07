@@ -8,19 +8,19 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/flor-de-loto-25.000/1-lxl-3-sm.jpg"
+    imagen: "/web/web/lenceria/lenceria/flor-de-loto-25-000/1-lxl-3-sm.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/flor-de-loto-25.000/1-sm-2-lxl.jpg"
+    imagen: "/web/web/lenceria/lenceria/flor-de-loto-25-000/1-sm-2-lxl.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/flor-de-loto-25.000/1-sm.jpg"
+    imagen: "/web/web/lenceria/lenceria/flor-de-loto-25-000/1-sm.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/flor-de-loto-25.000/3-sm-7-lxl.jpg"
+    imagen: "/web/web/lenceria/lenceria/flor-de-loto-25-000/3-sm-7-lxl.jpg"
   - nombre: "Color 5"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/flor-de-loto-25.000/4-sm-4-lxl.jpg"
+    imagen: "/web/web/lenceria/lenceria/flor-de-loto-25-000/4-sm-4-lxl.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

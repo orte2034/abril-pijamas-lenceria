@@ -8,10 +8,10 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/conjunto-pantalon-burda/enterizos/manga-corta-32.000/142f21c5-42bc-4ef0-ba90-a7558da1fe99.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/manga-corta-32-000/142f21c5-42bc-4ef0-ba90-a7558da1fe99.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/conjunto-pantalon-burda/enterizos/manga-corta-32.000/88ef72bf-0093-4d15-b98a-ebc925ea5f45.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/manga-corta-32-000/88ef72bf-0093-4d15-b98a-ebc925ea5f45.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

@@ -8,13 +8,22 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/conjunto-pantalon-burda/enterizos/manga-larga-35.000/4f46278f-036a-4b6c-9cd4-6181dc757b5f.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32-000/enterizo-tiras-26-000/206837db-5ac8-4f6e-995b-a6acbf9ef4de.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/conjunto-pantalon-burda/enterizos/manga-larga-35.000/85d38fce-4cd3-4128-afb4-659d0939de7a.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32-000/enterizo-tiras-26-000/20729789-e399-4bb8-81fb-5db12c08c77e.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/conjunto-pantalon-burda/enterizos/manga-larga-35.000/c8f8e904-e3ed-46e2-a0a2-5ed9a99e352c.jpg"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32-000/enterizo-tiras-26-000/4772d7bf-1905-40de-ac73-ccbfa9c7689c.jpg"
+  - nombre: "Color 4"
+    hex: "#cccccc"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32-000/enterizo-tiras-26-000/b2d55d30-53cf-4a0c-a6b8-f75ae2494905.jpg"
+  - nombre: "Color 5"
+    hex: "#cccccc"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32-000/enterizo-tiras-26-000/ceb19ea5-7bd7-4ba2-99ff-e427820f0f0d.jpg"
+  - nombre: "Color 6"
+    hex: "#cccccc"
+    imagen: "/web/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32-000/enterizo-tiras-26-000/dd789b40-8a42-4588-8b68-341ba1cfb7e2.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

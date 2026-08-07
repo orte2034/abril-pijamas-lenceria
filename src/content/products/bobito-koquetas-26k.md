@@ -8,19 +8,16 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/bobito-manga-23.000/bobito-koquetas/3-2-.jpg"
+    imagen: "/web/web/pijamas/bobito-manga-23-000/bobito-koquetas/26-000/1.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/bobito-manga-23.000/bobito-koquetas/3-3-.jpg"
+    imagen: "/web/web/pijamas/bobito-manga-23-000/bobito-koquetas/26-000/2.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/bobito-manga-23.000/bobito-koquetas/3.jpg"
+    imagen: "/web/web/pijamas/bobito-manga-23-000/bobito-koquetas/26-000/3-2-.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/bobito-manga-23.000/bobito-koquetas/4-2-.jpg"
-  - nombre: "Color 5"
-    hex: "#cccccc"
-    imagen: "/web/web/pijamas/bobito-manga-23.000/bobito-koquetas/4.jpg"
+    imagen: "/web/web/pijamas/bobito-manga-23-000/bobito-koquetas/26-000/3.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

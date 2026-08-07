@@ -8,10 +8,10 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/babydoll-cachetero-28.000/5-sm.jpg"
+    imagen: "/web/web/lenceria/babydoll/babydoll-cachetero-28-000/5-sm.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/babydoll-cachetero-28.000/6-lxl-2-sm.jpg"
+    imagen: "/web/web/lenceria/babydoll/babydoll-cachetero-28-000/6-lxl-2-sm.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

@@ -8,16 +8,22 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/batola-30.000/4-sm-4-l.jpg"
+    imagen: "/web/web/pijamas/batolas-21-000/batola-tiras/0b4aa920-3448-4db1-9a7c-d1ee156364d1.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/batola-30.000/5-sm-3-l-1-.jpg"
+    imagen: "/web/web/pijamas/batolas-21-000/batola-tiras/1b8190d0-3bac-4fce-a542-cb3bcfeed5ba.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/batola-30.000/5-sm-3-l-2-.jpg"
+    imagen: "/web/web/pijamas/batolas-21-000/batola-tiras/377b05f2-04c7-4216-9b17-c148ebdbad25.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/batola-30.000/5-sm-4-l.jpg"
+    imagen: "/web/web/pijamas/batolas-21-000/batola-tiras/52d4d495-61d7-484a-9e6a-ad6bb5f97b6f.jpg"
+  - nombre: "Color 5"
+    hex: "#cccccc"
+    imagen: "/web/web/pijamas/batolas-21-000/batola-tiras/afda72d3-55f1-4c64-a458-553e3bc879ab.jpg"
+  - nombre: "Color 6"
+    hex: "#cccccc"
+    imagen: "/web/web/pijamas/batolas-21-000/batola-tiras/b5fcca65-58aa-46c3-bc29-47e1fdc7bd49.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

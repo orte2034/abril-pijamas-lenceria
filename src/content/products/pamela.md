@@ -8,16 +8,16 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pamela-36.000/8599c1df-e211-47e8-a898-c3c52bbc6a2e.jpg"
+    imagen: "/web/web/pijamas/pamela-36-000/8599c1df-e211-47e8-a898-c3c52bbc6a2e.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pamela-36.000/8a1e327b-27d6-4b97-bb48-04b2326ec1c4.jpg"
+    imagen: "/web/web/pijamas/pamela-36-000/8a1e327b-27d6-4b97-bb48-04b2326ec1c4.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pamela-36.000/921cd0e4-259d-461a-ae13-66d5ebaea38d.jpg"
+    imagen: "/web/web/pijamas/pamela-36-000/921cd0e4-259d-461a-ae13-66d5ebaea38d.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pamela-36.000/93c05780-8080-4b5d-b7ed-a4a2020bf9df.jpg"
+    imagen: "/web/web/pijamas/pamela-36-000/93c05780-8080-4b5d-b7ed-a4a2020bf9df.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

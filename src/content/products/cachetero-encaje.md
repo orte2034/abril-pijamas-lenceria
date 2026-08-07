@@ -8,10 +8,10 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/cachetero-encaje-10.000/sm-3-.jpg"
+    imagen: "/web/web/lenceria/lenceria/cachetero-encaje-10-000/sm-3-.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/cachetero-encaje-10.000/sm.jpg"
+    imagen: "/web/web/lenceria/lenceria/cachetero-encaje-10-000/sm.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

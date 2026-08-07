@@ -8,13 +8,13 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/conjunto-samanta-30.000/13809a6b-a2c1-493e-b3f6-b87657954ef9.jpg"
+    imagen: "/web/web/lenceria/lenceria/conjunto-samanta-30-000/13809a6b-a2c1-493e-b3f6-b87657954ef9.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/conjunto-samanta-30.000/320faea5-1b18-42bc-a1b8-4e5788cd30a0.jpg"
+    imagen: "/web/web/lenceria/lenceria/conjunto-samanta-30-000/320faea5-1b18-42bc-a1b8-4e5788cd30a0.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/conjunto-samanta-30.000/8965e414-bbc4-4288-aa5f-1328572edb5c.jpg"
+    imagen: "/web/web/lenceria/lenceria/conjunto-samanta-30-000/8965e414-bbc4-4288-aa5f-1328572edb5c.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

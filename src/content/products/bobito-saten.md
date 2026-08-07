@@ -8,13 +8,13 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-satin/bobito-saten-25.000/2-sm-1-l.jpg"
+    imagen: "/web/web/pijamas/pijama-satin/bobito-saten-25-000/2-sm-1-l.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-satin/bobito-saten-25.000/2-xl.jpg"
+    imagen: "/web/web/pijamas/pijama-satin/bobito-saten-25-000/2-xl.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/pijama-satin/bobito-saten-25.000/3-sm.jpg"
+    imagen: "/web/web/pijamas/pijama-satin/bobito-saten-25-000/3-sm.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

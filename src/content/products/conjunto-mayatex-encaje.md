@@ -8,10 +8,10 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/conjunto-mayatex-encaje-22.000/2-2-.jpg"
+    imagen: "/web/web/lenceria/lenceria/conjunto-mayatex-encaje-22-000/2-2-.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/lenceria/conjunto-mayatex-encaje-22.000/2.jpg"
+    imagen: "/web/web/lenceria/lenceria/conjunto-mayatex-encaje-22-000/2.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

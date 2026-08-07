@@ -8,10 +8,10 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/short-esqueleto-25.000/0d7611e2-994e-4673-912d-30d332935303.jpg"
+    imagen: "/web/web/pijamas/short-esqueleto-25-000/0d7611e2-994e-4673-912d-30d332935303.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/pijamas/short-esqueleto-25.000/b603d30f-a335-4b59-b03d-46729a1b335f.jpg"
+    imagen: "/web/web/pijamas/short-esqueleto-25-000/b603d30f-a335-4b59-b03d-46729a1b335f.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |

@@ -8,7 +8,7 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/lenceria/babydoll/conjunto-raquel-27.000/4a3965ce-33f5-4472-b9fb-ed0746b6d3ff.jpg"
+    imagen: "/web/web/lenceria/babydoll/conjunto-raquel-27-000/4a3965ce-33f5-4472-b9fb-ed0746b6d3ff.jpg"
 
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
