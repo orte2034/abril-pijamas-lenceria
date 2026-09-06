@@ -105,13 +105,7 @@ for (const color of data.colores) {
 
         <section class="mt-10">
           <p class="eyebrow mb-3">{t('producto.tallas')}</p>
-          <SizeSelector 
-            nombre={data.nombre} 
-            tallas={data.tallas} 
-            tallasDisponibles={data.tallasDisponibles}
-            tallaUnica={data.tallaUnica}
-            tallasConsultar={data.tallasConsultar}
-          />
+          <SizeSelector nombre={data.nombre} tallas={data.tallas} />
         </section>
 
         {data.descripcion_es && (

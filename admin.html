@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración · Abril Catálogo</title>
+    <meta name="description" content="Panel de administración para gestionar productos del catálogo Abril">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Tailwind CSS via CDN (mismos colores que el sitio público) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        crema: '#F8F1EE',
+                        creamwarm: '#F1E5DD',
+                        ink: '#3A1A22',
+                        burgundy: {
+                            DEFAULT: '#7B2D3F',
+                            900: '#4D1A28',
+                            700: '#7B2D3F',
+                            500: '#9E4858',
+                            300: '#C58FA0',
+                        },
+                        rosa: {
+                            polvo: '#D9A89B',
+                            soft: '#E8C9BF',
+                            mist: '#F2DDD7',
+                        },
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Estilos base inline para carga inmediata -->
+    <style>
+        :root {
+            --color-bg: #f8f1ee;
+            --color-fg: #3a1a22;
+            --color-accent: #7b2d3f;
+            --color-soft: #d9a89b;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-fg);
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+        ::selection { background-color: var(--color-accent); color: var(--color-bg); }
+        .eyebrow { font-family: 'Inter', sans-serif; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-accent); font-weight: 500; }
+        .container-admin { width: 100%; max-width: 90rem; margin-inline: auto; padding-inline: 1.5rem; }
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s cubic-bezier(0.2, 0.6, 0.1, 1), transform 0.7s cubic-bezier(0.2, 0.6, 0.1, 1); }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+        .btn-primary { @apply inline-flex items-center justify-center px-6 py-3 bg-burgundy text-crema text-sm tracking-wider uppercase hover:bg-burgundy-900 transition font-medium; }
+        .btn-secondary { @apply inline-flex items-center justify-center px-6 py-3 border border-ink/30 text-ink text-sm tracking-wider uppercase hover:border-ink/50 hover:bg-ink/5 transition font-medium; }
+        .btn-danger { @apply inline-flex items-center justify-center px-6 py-3 bg-red-600 text-white text-sm tracking-wider uppercase hover:bg-red-700 transition font-medium; }
+        .input-field { @apply w-full px-4 py-3 border border-ink/30 bg-white text-ink placeholder-ink/40 focus:outline-none focus:ring-2 focus:ring-burgundy/30 focus:border-burgundy transition; }
+        .label-field { @apply block text-sm font-medium text-ink/80 mb-1.5; }
+        .card { @apply bg-white rounded-lg border border-ink/10 shadow-sm; }
+        .badge { @apply inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium; }
+        .badge-burgundy { @apply bg-burgundy/10 text-burgundy; }
+        .badge-green { @apply bg-green-100 text-green-700; }
+        .badge-gray { @apply bg-ink/10 text-ink/60; }
+        .dropzone { @apply border-2 border-dashed border-ink/20 rounded-lg p-8 text-center transition hover:border-burgundy/50 hover:bg-burgundy/5; }
+        .dropzone.active { @apply border-burgundy bg-burgundy/5; }
+        .image-preview { @apply relative w-20 h-20 rounded-lg overflow-hidden border border-ink/10; }
+        .image-preview img { @apply w-full h-full object-cover; }
+        .image-preview .remove { @apply absolute top-1 right-1 w-5 h-5 bg-red-500 text-white rounded-full flex items-center justify-center text-xs hover:bg-red-600 transition; }
+        .modal-overlay { @apply fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4; }
+        .modal { @apply bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto; }
+        .toast { @apply fixed bottom-6 right-6 z-50 px-6 py-4 rounded-lg shadow-lg text-white animate-slide-up; }
+        .toast-success { @apply bg-green-600; }
+        .toast-error { @apply bg-red-600; }
+        .toast-info { @apply bg-burgundy; }
+        @keyframes slide-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-slide-up { animation: slide-up 0.3s ease-out; }
+        .skeleton { @apply bg-ink/10 animate-pulse rounded; }
+        .tab-btn { @apply px-4 py-2 text-sm font-medium rounded-lg transition; }
+        .tab-btn.active { @apply bg-burgundy text-crema; }
+        .tab-btn:not(.active) { @apply text-ink/60 hover:bg-ink/5; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header Admin -->
+    <header class="border-b border-ink/10 bg-white/80 backdrop-blur-sm sticky top-0 z-40" id="adminHeader">
+        <div class="container-admin">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-4">
+                    <a href="/" target="_blank" class="flex items-center gap-2">
+                        <img src="/logo.jpeg" alt="Abril" class="h-8 w-8 rounded-full object-cover">
+                        <span class="font-serif text-xl text-ink">Abril Admin</span>
+                    </a>
+                    <span class="hidden md:block text-ink/30">|</span>
+                    <nav class="flex items-center gap-1" id="adminNav" style="display: none;">
+                        <button data-tab="dashboard" class="tab-btn active">Dashboard</button>
+                        <button data-tab="productos" class="tab-btn">Productos</button>
+                        <button data-tab="nuevo" class="tab-btn">Nuevo</button>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span id="userEmail" class="text-sm text-ink/60 hidden"></span>
+                    <button id="logoutBtn" class="btn-secondary text-xs py-2 px-4 hidden">Cerrar sesión</button>
+                    <button id="loginBtn" class="btn-primary text-xs py-2 px-4">Iniciar sesión</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1" id="mainContent">
+        <!-- Pantalla de Login -->
+        <section id="loginView" class="py-16 md:py-24">
+            <div class="container-admin">
+                <div class="max-w-md mx-auto">
+                    <div class="text-center mb-10 reveal">
+                        <p class="eyebrow mb-3">Panel de Administración</p>
+                        <h1 class="font-serif text-3xl md:text-4xl text-ink">Iniciar sesión</h1>
+                        <p class="mt-4 text-ink/60">Accede para gestionar el catálogo de productos</p>
+                    </div>
+                    
+                    <div class="card p-8 reveal">
+                        <form id="loginForm" class="space-y-6">
+                            <div>
+                                <label for="email" class="label-field">Correo electrónico</label>
+                                <input type="email" id="email" name="email" class="input-field" placeholder="admin@abril.com" required autocomplete="email">
+                            </div>
+                            <div>
+                                <label for="password" class="label-field">Contraseña</label>
+                                <input type="password" id="password" name="password" class="input-field" placeholder="••••••••" required autocomplete="current-password">
+                            </div>
+                            <div id="loginError" class="hidden text-red-600 text-sm text-center"></div>
+                            <button type="submit" class="btn-primary w-full" id="loginSubmit">
+                                <span class="flex items-center justify-center gap-2">
+                                    <svg id="loginSpinner" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                    Iniciar sesión
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard (oculto hasta login) -->
+        <section id="dashboardView" class="hidden py-12">
+            <div class="container-admin">
+                <div class="reveal">
+                    <p class="eyebrow mb-2">Panel de Control</p>
+                    <h1 class="font-serif text-3xl md:text-4xl text-ink">Dashboard</h1>
+                </div>
+                
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6" id="statsCards">
+                    <article class="card p-6 reveal">
+                        <p class="eyebrow mb-1">Total Productos</p>
+                        <p class="font-serif text-4xl text-ink" id="statTotal">—</p>
+                    </article>
+                    <article class="card p-6 reveal">
+                        <p class="eyebrow mb-1">Destacados</p>
+                        <p class="font-serif text-4xl text-ink" id="statDestacados">—</p>
+                    </article>
+                    <article class="card p-6 reveal">
+                        <p class="eyebrow mb-1">Última actualización</p>
+                        <p class="font-serif text-2xl text-ink" id="statUltima">—</p>
+                    </article>
+                </div>
+
+                <div class="mt-10 reveal">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="font-serif text-2xl text-ink">Productos recientes</h2>
+                        <a href="#productos" data-tab-link="productos" class="btn-secondary text-sm">Ver todos</a>
+                    </div>
+                    <div class="card overflow-hidden">
+                        <table class="w-full" id="recentProductsTable">
+                            <thead class="bg-ink/5">
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-ink/60 uppercase tracking-wider">Producto</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-ink/60 uppercase tracking-wider">Categoría</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-ink/60 uppercase tracking-wider">Precio</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-ink/60 uppercase tracking-wider">Estado</th>
+                                    <th class="px-4 py-3 text-right text-xs font-medium text-ink/60 uppercase tracking-wider">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentProductsBody" class="divide-y divide-ink/10">
+                                <!-- Se llena dinámicamente -->
+                            </tbody>
+                        </table>
+                        <div id="recentEmpty" class="hidden p-8 text-center text-ink/50">No hay productos aún</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Listado de Productos -->
+        <section id="productosView" class="hidden py-12">
+            <div class="container-admin">
+                <div class="flex items-center justify-between mb-8 reveal">
+                    <div>
+                        <p class="eyebrow mb-2">Gestión</p>
+                        <h1 class="font-serif text-3xl md:text-4xl text-ink">Productos</h1>
+                    </div>
+                    <button id="btnNuevoProducto" class="btn-primary">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        Nuevo producto
+                    </button>
+                </div>
+
+                <!-- Filtros y búsqueda -->
+                <div class="card p-4 mb-6 reveal">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="flex-1">
+                            <input type="text" id="searchProducts" placeholder="Buscar por nombre..." class="input-field" autocomplete="off">
+                        </div>
+                        <select id="filterCategoria" class="input-field w-auto">
+                            <option value="">Todas las categorías</option>
+                            <option value="pijamas">Pijamas</option>
+                            <option value="lenceria">Lencería</option>
+                            <option value="conjuntos">Conjuntos</option>
+                        </select>
+                        <select id="filterDestacado" class="input-field w-auto">
+                            <option value="">Todos</option>
+                            <option value="true">Destacados</option>
+                            <option value="false">No destacados</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tabla de productos -->
+                <div class="card overflow-hidden reveal">
+                    <table class="w-full" id="productsTable">
+                        <thead class="bg-ink/5">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-ink/60 uppercase tracking-wider">Imagen</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-ink/60 uppercase tracking-wider">Producto</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-ink/60 uppercase tracking-wider">Categoría</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-ink/60 uppercase tracking-wider">Precio</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-ink/60 uppercase tracking-wider">Destacado</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-ink/60 uppercase tracking-wider">Creado</th>
+                                <th class="px-4 py-3 text-right text-xs font-medium text-ink/60 uppercase tracking-wider">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsBody" class="divide-y divide-ink/10">
+                            <!-- Se llena dinámicamente -->
+                        </tbody>
+                    </table>
+                    <div id="productsEmpty" class="hidden p-8 text-center text-ink/50">No hay productos que coincidan con la búsqueda</div>
+                    
+                    <!-- Paginación -->
+                    <div id="pagination" class="px-4 py-4 border-t border-ink/10 flex items-center justify-between">
+                        <p class="text-sm text-ink/60" id="paginationInfo">Mostrando 0 de 0 productos</p>
+                        <div class="flex gap-2" id="paginationButtons">
+                            <!-- Botones de paginación -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario Nuevo/Editar Producto -->
+        <section id="formView" class="hidden py-12">
+            <div class="container-admin">
+                <div class="mb-8 reveal">
+                    <p class="eyebrow mb-2">Gestión</p>
+                    <h1 class="font-serif text-3xl md:text-4xl text-ink" id="formTitle">Nuevo producto</h1>
+                </div>
+
+                <form id="productForm" class="card p-6 md:p-8 space-y-8" enctype="multipart/form-data">
+                    <input type="hidden" id="productId" name="id">
+                    
+                    <!-- Sección Básica -->
+                    <fieldset>
+                        <legend class="font-serif text-xl text-ink mb-6">Información básica</legend>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="titulo" class="label-field">Título *</label>
+                                <input type="text" id="titulo" name="titulo" class="input-field" required placeholder="Ej: CONJUNTO NIEVE">
+                            </div>
+                            <div>
+                                <label for="categoria" class="label-field">Categoría *</label>
+                                <select id="categoria" name="categoria" class="input-field" required>
+                                    <option value="">Seleccionar...</option>
+                                    <option value="pijamas">Pijamas</option>
+                                    <option value="lenceria">Lencería</option>
+                                    <option value="conjuntos">Conjuntos</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="subtipo" class="label-field">Subtipo</label>
+                                <select id="subtipo" name="subtipo" class="input-field">
+                                    <option value="">Ninguno (Clásica)</option>
+                                    <option value="babydoll">Babydoll</option>
+                                    <option value="bodys">Bodys</option>
+                                    <option value="clasica">Clásica</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="coleccion" class="label-field">Colección</label>
+                                <input type="text" id="coleccion" name="coleccion" class="input-field" value="Colección 2026" placeholder="Colección 2026">
+                            </div>
+                            <div>
+                                <label for="precio" class="label-field">Precio (COP) *</label>
+                                <input type="number" id="precio" name="precio" class="input-field" required min="0" step="100" placeholder="24000">
+                            </div>
+                            <div class="md:col-span-2 flex items-center gap-4">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" id="destacado" name="destacado" class="w-4 h-4 accent-burgundy border-ink/30 rounded">
+                                    <span class="text-sm text-ink">Marcar como destacado en home</span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Imágenes -->
+                    <fieldset>
+                        <legend class="font-serif text-xl text-ink mb-6">Imágenes del producto</legend>
+                        <p class="text-sm text-ink/60 mb-4">Arrastra o haz clic para subir imágenes. La primera imagen será la principal. Máximo 10 imágenes, 5MB cada una.</p>
+                        <div class="dropzone" id="dropzone">
+                            <input type="file" id="imagenesInput" name="imagenes" accept="image/*" multiple class="hidden" data-max-files="10" data-max-size="5242880">
+                            <div class="flex flex-col items-center gap-3">
+                                <svg class="w-12 h-12 text-ink/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <div>
+                                    <p class="font-medium text-ink">Arrastra imágenes aquí</p>
+                                    <p class="text-sm text-ink/50">o haz clic para seleccionar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="imagePreviews" class="mt-4 flex flex-wrap gap-3 min-h-[60px]"></div>
+                        <div id="existingImages" class="hidden">
+                            <p class="text-sm text-ink/60 mb-2">Imágenes actuales:</p>
+                            <div id="existingImagesGrid" class="flex flex-wrap gap-3"></div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Colores y variantes -->
+                    <fieldset>
+                        <legend class="font-serif text-xl text-ink mb-6">Colores y variantes</legend>
+                        <p class="text-sm text-ink/60 mb-4">Define cada variante de color con su imagen. Al menos uno es requerido.</p>
+                        <div id="coloresContainer" class="space-y-4">
+                            <!-- Se añaden dinámicamente -->
+                        </div>
+                        <button type="button" id="addColorBtn" class="btn-secondary">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                            Añadir color
+                        </button>
+                    </fieldset>
+
+                    <!-- Tallas -->
+                    <fieldset>
+                        <legend class="font-serif text-xl text-ink mb-6">Tallas disponibles</legend>
+                        <div class="flex flex-wrap gap-2" id="tallasContainer">
+                            <!-- Se generan dinámicamente -->
+                        </div>
+                        <div class="mt-4">
+                            <label class="label-field">Añadir talla personalizada</label>
+                            <div class="flex gap-2">
+                                <input type="text" id="nuevaTalla" class="input-field flex-1" placeholder="Ej: XXL, 36, Única">
+                                <button type="button" id="addTallaBtn" class="btn-secondary whitespace-nowrap">Añadir</button>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Especificaciones -->
+                    <fieldset>
+                        <legend class="font-serif text-xl text-ink mb-6">Especificaciones (JSON)</legend>
+                        <p class="text-sm text-ink/60 mb-4">Información técnica adicional en formato JSON. Ej: {"material": "Algodón 100%", "cuidado": "Lavar en frío"}</p>
+                        <textarea id="especificaciones" name="especificaciones" class="input-field font-mono text-sm" rows="6" placeholder='{ "material": "", "cuidado": "", "composicion": "" }'></textarea>
+                    </fieldset>
+
+                    <!-- Descripciones -->
+                    <fieldset>
+                        <legend class="font-serif text-xl text-ink mb-6">Descripciones</legend>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="descripcion_es" class="label-field">Descripción (Español)</label>
+                                <textarea id="descripcion_es" name="descripcion_es" class="input-field" rows="4" placeholder="Descripción en español..."></textarea>
+                            </div>
+                            <div>
+                                <label for="descripcion_en" class="label-field">Descripción (English)</label>
+                                <textarea id="descripcion_en" name="descripcion_en" class="input-field" rows="4" placeholder="Description in English..."></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Acciones -->
+                    <div class="flex flex-col md:flex-row gap-4 justify-end pt-6 border-t border-ink/10">
+                        <button type="button" id="cancelFormBtn" class="btn-secondary">Cancelar</button>
+                        <button type="submit" class="btn-primary" id="submitBtn">
+                            <span id="submitText">Guardar producto</span>
+                            <svg id="submitSpinner" class="w-5 h-5 animate-spin hidden ml-2" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Admin -->
+    <footer class="border-t border-ink/10 bg-white/50 py-6">
+        <div class="container-admin text-center text-sm text-ink/50">
+            Panel de Administración · Abril Pijamas y Lencería
+        </div>
+    </footer>
+
+    <!-- Modales -->
+    <div id="deleteModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="deleteModalTitle">
+        <div class="modal">
+            <div class="p-6">
+                <h2 id="deleteModalTitle" class="font-serif text-2xl text-ink mb-2">Eliminar producto</h2>
+                <p class="text-ink/60 mb-6">¿Estás seguro de eliminar <strong id="deleteProductName"></strong>? Esta acción no se puede deshacer y eliminará también las imágenes asociadas.</p>
+                <div class="flex justify-end gap-3">
+                    <button type="button" id="cancelDeleteBtn" class="btn-secondary">Cancelar</button>
+                    <button type="button" id="confirmDeleteBtn" class="btn-danger">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+        <div class="modal max-w-4xl">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="font-serif text-2xl text-ink">Galería del producto</h2>
+                    <button id="closeImageModal" class="text-ink/50 hover:text-ink text-2xl leading-none">&times;</button>
+                </div>
+                <div id="imageModalGrid" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="js/supabase-client.js"></script>
+    <script src="js/admin.js"></script>
+    
+    <script>
+        // Configuración de Supabase para el admin (usar las mismas credenciales)
+        const ADMIN_SUPABASE_URL = 'https://cgmhcbcoovbadsfjmoen.supabase.co';
+        const ADMIN_SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnbWhjYmNvb3ZiYWRzZmptb2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3MjEyMjQsImV4cCI6MjEwNDI5NzIyNH0.iyc1G1izwBkUVUVDJanuRN8vIximJw21GWyqrEVpslA';
+        
+        // Inicializar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', () => {
+            // Configurar cliente admin
+            window.AdminSupabase = window.supabase.createClient(ADMIN_SUPABASE_URL, ADMIN_SUPABASE_ANON_KEY);
+            
+            // Inicializar panel admin
+            if (window.AdminPanel) {
+                window.AdminPanel.init();
+            }
+        });
+    </script>
+</body>
+</html>
