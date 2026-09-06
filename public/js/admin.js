@@ -30,6 +30,11 @@ const AdminPanel = {
     ALLOWED_TYPES: ['image/jpeg', 'image/png', 'image/webp', 'image/gif'],
 
     async init() {
+        this.supabase = window.AdminSupabase;
+        if (!this.supabase) {
+            console.error('AdminSupabase no inicializado. Verifica admin.html');
+            return;
+        }
         this.cacheElements();
         this.bindEvents();
         this.initTallas();
