@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
+    <link rel="apple-touch-icon" href="/logo.jpeg" />
+    <link rel="shortcut icon" href="/logo.jpeg" />
+    <title>Abril Pijamas y Lencería · Hecho en Colombia</title>
+    <meta name="description" content="Pijamas, lencería y conjuntos diseñados en Colombia. Tejidos suaves, cuidado en cada detalle." />
+    <link rel="canonical" href="https://abrilpijamasylenceria.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Abril Pijamas y Lencería · Hecho en Colombia" />
+    <meta property="og:description" content="Pijamas, lencería y conjuntos diseñados en Colombia. Tejidos suaves, cuidado en cada detalle." />
+    <meta property="og:url" content="https://abrilpijamasylenceria.com/" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:image" content="https://abrilpijamasylenceria.com/logo.jpeg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abril Pijamas y Lencería · Hecho en Colombia" />
+    <meta name="twitter:description" content="Pijamas, lencería y conjuntos diseñados en Colombia. Tejidos suaves, cuidado en cada detalle." />
+    <meta name="twitter:image" content="https://abrilpijamasylenceria.com/logo.jpeg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        crema: '#F8F1EE',
+                        creamwarm: '#F1E5DD',
+                        ink: '#3A1A22',
+                        burgundy: {
+                            DEFAULT: '#7B2D3F',
+                            900: '#4D1A28',
+                            700: '#7B2D3F',
+                            500: '#9E4858',
+                            300: '#C58FA0',
+                        },
+                        rosa: {
+                            polvo: '#D9A89B',
+                            soft: '#E8C9BF',
+                            mist: '#F2DDD7',
+                        },
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    },
+                    fontSize: {
+                        'display-xl': ['clamp(4rem, 10vw, 9rem)', { lineHeight: '0.95', letterSpacing: '-0.02em' }],
+                        'display': ['clamp(2.5rem, 6vw, 5rem)', { lineHeight: '1', letterSpacing: '-0.01em' }],
+                        'lead': ['clamp(1.125rem, 1.5vw, 1.375rem)', { lineHeight: '1.6' }],
+                    },
+                    maxWidth: {
+                        'content': '85rem',
+                        'editorial': '72rem',
+                        'read': '40rem',
+                    },
+                    transitionTimingFunction: {
+                        'editorial': 'cubic-bezier(0.2, 0.6, 0.1, 1)',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos base inline -->
+    <style>
+        :root {
+            --color-bg: #f8f1ee;
+            --color-fg: #3a1a22;
+            --color-accent: #7b2d3f;
+            --color-soft: #d9a89b;
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-body: 'Inter', system-ui, sans-serif;
+        }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-fg);
+            font-family: var(--font-body);
+        }
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        ::selection { background-color: var(--color-accent); color: var(--color-bg); }
+        .container-edit {
+            width: 100%;
+            max-width: 85rem;
+            margin-inline: auto;
+            padding-inline: 1.25rem;
+        }
+        .eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            font-weight: 500;
+        }
+        @keyframes fadeup {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .reveal { opacity: 0; }
+        .reveal.is-visible { animation: fadeup 0.7s cubic-bezier(0.2, 0.6, 0.1, 1) forwards; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="border-b border-ink/10 bg-white/80 backdrop-blur-sm sticky top-0 z-40">
+        <div class="container-edit">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <img src="/logo.jpeg" alt="Abril Pijamas y Lencería — logo de marca" class="h-8 w-8 rounded-full object-cover">
+                    <span class="font-serif text-xl text-ink">Abril</span>
+                </a>
+                <nav class="flex items-center gap-6">
+                    <a href="/" class="text-sm text-ink/70 hover:text-burgundy transition">Inicio</a>
+                    <a href="/catalogo" class="text-sm text-ink/70 hover:text-burgundy transition">Catálogo</a>
+                    <a href="/contacto" class="text-sm text-ink/70 hover:text-burgundy transition">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="container-edit pt-20 pb-32">
+            <div class="reveal flex justify-center mb-16">
+                <div class="relative">
+                    <div class="absolute inset-0 -m-12 rounded-full bg-rosa-polvo/40 blur-3xl scale-125"></div>
+                    <div class="absolute inset-0 -m-6 rounded-full bg-burgundy/10 blur-2xl"></div>
+                    <img
+                        src="/logo.jpeg"
+                        alt="Abril Pijamas y Lencería — logo de marca"
+                        class="relative h-64 w-64 md:h-96 md:w-96 object-cover rounded-full ring-1 ring-ink/15 shadow-2xl shadow-rosa-polvo/40 transition-transform duration-700 hover:scale-[1.03]"
+                        width="384"
+                        height="384"
+                    />
+                </div>
+            </div>
+            <p class="eyebrow reveal text-center text-sm">NUEVA COLECCIÓN</p>
+            <h1 class="reveal mt-6 font-serif text-display-xl font-light text-ink max-w-content text-center">
+                Pijamas, lencería y conjuntos<br>diseñados en Colombia
+            </h1>
+            <p class="reveal mt-8 text-lead text-ink/75 max-w-editorial mx-auto text-center">
+                Tejidos suaves, acabados con cuidado y colores que cuidan.<br>Hecho en pequeñas series con amor desde Colombia.
+            </p>
+            <div class="reveal mt-12 flex items-center justify-center gap-6 flex-wrap">
+                <a href="/catalogo" class="inline-flex items-center gap-3 px-8 py-4 bg-burgundy text-crema text-sm tracking-wider uppercase hover:bg-burgundy-900 transition">
+                    Ver catálogo
+                </a>
+                <span class="text-xs text-ink/50 tracking-wider uppercase">Desplázate ↓</span>
+            </div>
+        </section>
+
+        <!-- Sección Catálogo Preview -->
+        <section class="container-edit py-16 border-t border-ink/10">
+            <div class="flex items-baseline justify-between mb-12 flex-wrap gap-2">
+                <h2 class="font-serif text-3xl md:text-4xl text-ink">Catálogo</h2>
+                <a href="/catalogo" class="text-xs tracking-wider uppercase text-burgundy hover:underline">Ver todo →</a>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12" id="homeProductsGrid">
+                <!-- Productos destacados se inyectan aquí -->
+                <div class="col-span-full text-center py-8">
+                    <div class="w-8 h-8 border-4 border-burgundy border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                    <p class="text-ink/50">Cargando destacados...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valores -->
+        <section class="container-edit py-24 border-t border-ink/10 mt-16">
+            <div class="grid md:grid-cols-3 gap-8 text-sm">
+                <div class="reveal">
+                    <p class="eyebrow mb-3">Hecho en Colombia</p>
+                    <p class="text-ink/80">Diseñado y cosido en pequeñas series, con tejidos suaves y cuidado del detalle.</p>
+                </div>
+                <div class="reveal">
+                    <p class="eyebrow mb-3">Atención directa</p>
+                    <p class="text-ink/80">Consultas por WhatsApp — te respondemos con tallas, disponibilidad y envíos.</p>
+                </div>
+                <div class="reveal">
+                    <p class="eyebrow mb-3">Envíos a todo el país</p>
+                    <p class="text-ink/80">Despachamos a cualquier ciudad de Colombia. Coordinamos contigo por WhatsApp.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-ink/10 bg-white/50 py-12">
+        <div class="container-edit">
+            <div class="grid md:grid-cols-3 gap-8 text-sm">
+                <div class="reveal">
+                    <p class="eyebrow mb-3">Hecho en Colombia</p>
+                    <p class="text-ink/80">Diseñado y cosido en pequeñas series, con tejidos suaves y cuidado del detalle.</p>
+                </div>
+                <div class="reveal">
+                    <p class="eyebrow mb-3">Atención directa</p>
+                    <p class="text-ink/80">Consultas por WhatsApp — te respondemos con tallas, disponibilidad y envíos.</p>
+                </div>
+                <div class="reveal">
+                    <p class="eyebrow mb-3">Envíos a todo el país</p>
+                    <p class="text-ink/80">Despachamos a cualquier ciudad de Colombia. Coordinamos contigo por WhatsApp.</p>
+                </div>
+            </div>
+            <div class="mt-10 pt-6 border-t border-ink/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-ink/50">
+                <p>Abril Pijamas y Lencería · Hecho en Colombia</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/abrilpijamasylenceria" target="_blank" rel="noopener" class="hover:text-burgundy" aria-label="Instagram">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-3.584-.069-4.849-.149-3.227-1.664-4.771-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/people/Abril-pijamas-y-lenceria/61553498622740/" target="_blank" rel="noopener" class="hover:text-burgundy" aria-label="Facebook">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@abrilpijamasylenceria" target="_blank" rel="noopener" class="hover:text-burgundy" aria-label="TikTok">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.545 10.239v3.831h5.445l-1.072 4.174H13.47V24h4.218c2.606 0 4.177-2.748 3.306-5.646l-1.629-5.312c1.143-.31 2.077-.965 2.744-1.891-.973-1.928-3.44-3.15-5.891-3.15-1.572 0-2.98.432-4.153 1.146v-3.337c0 0-.591-.804-1.844-.804-1.816 0-3.086 1.28-3.086 2.994v2.331h-3.223v-3.831h3.223v-2.717c0-2.94 1.668-4.402 4.071-4.402 1.156 0 2.145.088 2.428.127v2.634h-1.663c-1.31 0-1.563.623-1.563 1.536v1.995h3.11Z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="js/supabase-client.js"></script>
+    <script src="js/catalog.js"></script>
+
+    <!-- IntersectionObserver para animaciones reveal -->
+    <script>
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('is-visible');
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach((el) => obs.observe(el));
+    </script>
+
+    <!-- Cargar productos destacados en Home -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const grid = document.getElementById('homeProductsGrid');
+            if (!grid) return;
+            
+            try {
+                const supabase = await window.AbrilSupabase.getClient();
+                const { data, error } = await supabase
+                    .from('productos')
+                    .select('*')
+                    .eq('destacado', true)
+                    .order('fecha_creacion', { ascending: false })
+                    .limit(8);
+                
+                if (error) throw error;
+                
+                if (!data?.length) {
+                    grid.innerHTML = '<p class="text-ink/50 text-center col-span-full">No hay productos destacados aún.</p>';
+                    return;
+                }
+                
+                // Reutilizar la lógica de transformProduct de catalog.js
+                const products = data.map(p => {
+                    const colores = Array.isArray(p.colores) ? p.colores : 
+                                   (typeof p.colores === 'string' ? JSON.parse(p.colores) : []);
+                    const tallas = Array.isArray(p.tallas) ? p.tallas : 
+                                  (typeof p.tallas === 'string' ? p.tallas.split(',').map(t => t.trim()) : ['XS','S','M','L','XL']);
+                    const imagenes = Array.isArray(p.imagenes) ? p.imagenes : 
+                                    (typeof p.imagenes === 'string' ? JSON.parse(p.imagenes) : []);
+                    const slug = p.titulo
+                        .toLowerCase()
+                        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                        .replace(/[^a-z0-9]+/g, '-')
+                        .replace(/(^-|-$)/g, '');
+                    return {
+                        id: p.id,
+                        slug,
+                        nombre: p.titulo,
+                        categoria: p.categoria,
+                        subtipo: p.subtipo,
+                        coleccion: p.coleccion || 'Colección 2026',
+                        precio: p.precio,
+                        destacado: p.destacado,
+                        colores: colores.length > 0 ? colores : [
+                            { nombre: 'Único', hex: '#cccccc', imagen: imagenes[0] || '/logo.jpeg' }
+                        ],
+                        tallas,
+                        descripcion_es: p.descripcion_es || '',
+                        imagenes,
+                        fecha_creacion: p.fecha_creacion
+                    };
+                });
+                
+                // Renderizar cards (HTML idéntico a ProductCard.astro)
+                grid.innerHTML = products.map(p => {
+                    const firstColor = p.colores[0];
+                    const coleccion = p.coleccion;
+                    const categoria = p.categoria;
+                    const subtipo = p.subtipo;
+                    return `
+                        <article class="reveal group cursor-pointer" data-product-card data-slug="${p.slug}" data-nombre="${p.nombre}" data-coleccion="${coleccion}" data-categoria="${categoria}" data-subtipo="${subtipo || ''}">
+                            <a href="/producto/${p.slug}" class="block" aria-label="Ver ${p.nombre}">
+                                <div class="relative aspect-[3/4] overflow-hidden bg-creamwarm rounded-sm">
+                                    <img data-product-image src="${firstColor.imagen}" alt="${p.nombre} ${firstColor.nombre}" class="w-full h-full object-cover transition-all duration-500 ease-editorial group-hover:scale-[1.03]" loading="lazy" />
+                                    <div class="absolute top-3 left-3"><span class="eyebrow bg-crema/90 px-2.5 py-1">${coleccion}</span></div>
+                                    ${subtipo && subtipo !== 'clasica' ? `<div class="absolute top-3 right-3"><span class="eyebrow bg-burgundy/90 text-crema px-2.5 py-1 capitalize">${subtipo}</span></div>` : ''}
+                                </div>
+                                <div class="mt-4 flex items-baseline justify-between">
+                                    <h3 class="font-serif text-lg text-ink">${p.nombre}</h3>
+                                    <span class="text-sm text-ink/70">${new Intl.NumberFormat('es-CO', {style:'currency',currency:'COP',minimumFractionDigits:0}).format(p.precio)}</span>
+                                </div>
+                                ${p.colores.length > 1 ? `<p class="mt-1 text-xs text-ink/60">${p.colores.length} colores · <span data-color-name">${firstColor.nombre}</span></p>` : `<p class="mt-1 text-xs text-ink/60 capitalize">${categoria}${subtipo && subtipo !== 'clasica' ? ` · ${subtipo}` : ''}</p>`}
+                                ${p.colores.length > 1 ? `<div class="mt-3 [&>[data-color-selector]]:scale-90 [&>[data-color-selector]]:origin-left">${p.colores.map((c,i) => `<button type="button" class="relative w-9 h-9 rounded-full border transition overflow-hidden ${i===0?'ring-2 ring-burgundy/30 border-burgundy border-2':'border-ink/20 hover:border-ink/50'}" style="${c.hex && c.hex!=='#cccccc'?'background-color:'+c.hex+';':''}" data-color="${c.nombre}" data-image="${c.imagen}" data-idx="${i}" aria-label="${c.nombre}" aria-pressed="${i===0}" title="${c.nombre}">${c.hex==='#cccccc'?`<img src="${c.imagen}" alt="${c.nombre}" class="w-full h-full object-cover" loading="lazy" />`:''}</button>`).join('')}</div>` : ''}
+                            </a>
+                            <span class="hidden" data-talla-selected></span>
+                        </article>
+                    `;
+                }).join('');
+                
+                // Re-inicializar observers para las nuevas cards
+                document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+                
+            } catch (err) {
+                console.error('Error cargando destacados:', err);
+                grid.innerHTML = '<p class="text-ink/50 text-center col-span-full">Error cargando productos.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
