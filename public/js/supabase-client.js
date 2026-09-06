@@ -5,7 +5,7 @@
  */
 
 // Configuración de Supabase - REEMPLAZAR CON TUS CREDENCIALES
-const SUPABASE_URL = 'https://cgmhcbcoovbadsfjmoen.supabase.co';
+const SUPABASE_URL = 'https://cgmhcbcoovbadsfjmoen.supabase.co/rest/v1/';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnbWhjYmNvb3ZiYWRzZmptb2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3MjEyMjQsImV4cCI6MjEwNDI5NzIyNH0.iyc1G1izwBkUVUVDJanuRN8vIximJw21GWyqrEVpslA';
 
 // Inicializar cliente Supabase vía CDN
