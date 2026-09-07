@@ -9,7 +9,7 @@ const SUPABASE_URL = 'https://cgmhcbcoovbadsfjmoen.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnbWhjYmNvb3ZiYWRzZmptb2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3MjEyMjQsImV4cCI6MjEwNDI5NzIyNH0.iyc1G1izwBkUVUVDJanuRN8vIximJw21GWyqrEVpslA';
 
 // Inicializar cliente Supabase (window.supabase ya viene del script tag CDN)
-let supabase = null;
+let supabaseClient = null;
 
 function initSupabase() {
     if (typeof window === 'undefined') return null;
@@ -19,13 +19,13 @@ function initSupabase() {
         return null;
     }
     
-    supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-    return supabase;
+    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    return supabaseClient;
 }
 
 // Función helper para obtener el cliente (inicializa si es necesario)
 async function getSupabase() {
-    if (supabase) return supabase;
+    if (supabaseClient) return supabaseClient;
     return initSupabase();
 }
 
