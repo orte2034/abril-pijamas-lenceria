@@ -8,7 +8,7 @@ export default defineConfig({
   defaultLocale: 'es',
   output: 'server',
   adapter: vercel({
-    runtime: 'nodejs22.x'
+    runtime: 'nodejs20.x'
   }),
   integrations: [
     tailwind({ applyBaseStyles: false }),

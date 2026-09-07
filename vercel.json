@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "src/pages/**/*.{js,ts,jsx,tsx}": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}
