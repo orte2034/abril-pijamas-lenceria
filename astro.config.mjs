@@ -7,7 +7,9 @@ export default defineConfig({
   site: 'https://abrilpijamasylenceria.vercel.app',
   defaultLocale: 'es',
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel({
+    runtime: 'nodejs18.x'
+  }),
   integrations: [
     tailwind({ applyBaseStyles: false }),
     mdx(),
