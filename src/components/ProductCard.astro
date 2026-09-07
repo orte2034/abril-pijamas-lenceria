@@ -6,7 +6,10 @@ export interface Props {
   product: any;
 }
 const { product } = Astro.props;
-const { data, slug } = product;
+
+// Soporte para ambos formatos: Astro collection entry o JSON directo de API
+const data = product.data || product;
+const slug = product.slug || data.slug;
 const firstColor = data.colores[0];
 const coleccion = data.coleccion || 'Colección 2026';
 const categoria = data.categoria;

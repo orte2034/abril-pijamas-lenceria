@@ -2,11 +2,89 @@
 import Base from '@layouts/Base.astro';
 import ProductCard from '@components/ProductCard.astro';
 import { t } from '@i18n/index';
-import { getCollection } from 'astro:content';
+import { createClient } from '@supabase/supabase-js';
 
-const products = await getCollection('products');
-const allColors = Array.from(new Set(products.flatMap((p) => p.data.colores.map((c) => c.nombre))));
-const maxPrice = Math.max(...products.map((p) => p.data.precio));
+const supabase = createClient(
+  import.meta.env.SUPABASE_URL || 'https://cgmhcbcoovbadsfjmoen.supabase.co',
+  import.meta.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnbWhjYmNvb3ZiYWRzZmptb2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3MjEyMjQsImV4cCI6MjEwNDI5NzIyNH0.iyc1G1izwBkUVUVDJanuRN8vIximJw21GWyqrEVpslA'
+);
+
+interface ProductoRaw {
+  id: string;
+  titulo: string;
+  precio: number;
+  categoria: string;
+  subtipo: string | null;
+  coleccion: string | null;
+  destacado: boolean;
+  colores: any;
+  tallas: any;
+  imagenes: any;
+  descripcion_es: string | null;
+  descripcion_en: string | null;
+  fecha_creacion: string;
+}
+
+interface Producto {
+  id: string;
+  slug: string;
+  nombre: string;
+  categoria: string;
+  subtipo: string | null;
+  coleccion: string;
+  precio: number;
+  destacado: boolean;
+  colores: Array<{ nombre: string; hex: string; imagen: string }>;
+  tallas: string[];
+  descripcion_es: string;
+  descripcion_en: string;
+  imagenes: string[];
+  fecha_creacion: string;
+}
+
+function transformProduct(p: ProductoRaw): Producto {
+  const colores = Array.isArray(p.colores) ? p.colores :
+                 (typeof p.colores === 'string' ? JSON.parse(p.colores) : []);
+  const tallas = Array.isArray(p.tallas) ? p.tallas :
+                (typeof p.tallas === 'string' ? p.tallas.split(',').map((t: string) => t.trim()) : ['XS','S','M','L','XL']);
+  const imagenes = Array.isArray(p.imagenes) ? p.imagenes :
+                  (typeof p.imagenes === 'string' ? JSON.parse(p.imagenes) : []);
+  
+  const slug = p.titulo
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+  return {
+    id: p.id,
+    slug,
+    nombre: p.titulo,
+    categoria: p.categoria,
+    subtipo: p.subtipo,
+    coleccion: p.coleccion || 'Colección 2026',
+    precio: p.precio,
+    destacado: p.destacado,
+    colores: colores.length > 0 ? colores : [
+      { nombre: 'Único', hex: '#cccccc', imagen: imagenes[0] || '/logo.jpeg' }
+    ],
+    tallas,
+    descripcion_es: p.descripcion_es || '',
+    descripcion_en: p.descripcion_en || '',
+    imagenes,
+    fecha_creacion: p.fecha_creacion
+  };
+}
+
+const { data: productsData } = await supabase
+  .from('productos')
+  .select('*')
+  .order('fecha_creacion', { ascending: false })
+  .limit(200);
+
+const products: Producto[] = (productsData || []).map(transformProduct);
+const allColors = Array.from(new Set(products.flatMap((p) => p.colores.map((c) => c.nombre))));
+const maxPrice = products.length > 0 ? Math.max(...products.map((p) => p.precio)) : 50000;
 const cats = ['pijamas', 'lenceria', 'conjuntos'];
 const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
 ---
@@ -82,17 +160,17 @@ const subtiposLenceria = ['babydoll', 'bodys', 'clasica'];
       <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12" data-products-grid>
         {products.map((p) => (
           <div data-product-item
-               data-categoria={p.data.categoria}
-               data-subtipo={p.data.subtipo || ''}
-               data-precio={p.data.precio}
-               data-colores={p.data.colores.map((c) => c.nombre).join('|')}>
+               data-categoria={p.categoria}
+               data-subtipo={p.subtipo || ''}
+               data-precio={p.precio}
+               data-colores={p.colores.map((c) => c.nombre).join('|')}>
             <ProductCard product={p} />
           </div>
         ))}
       </div>
-    </div>
 
-    <p class="hidden text-ink/60 text-sm mt-16" data-empty>{t('catalogo.empty')}</p>
+      <p class="hidden text-ink/60 text-sm mt-16" data-empty>{t('catalogo.empty')}</p>
+    </div>
   </section>
 </Base>
 

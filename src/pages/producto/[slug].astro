@@ -5,19 +5,123 @@ import SizeSelector from '@components/SizeSelector.astro';
 import WhatsAppButton from '@components/WhatsAppButton.astro';
 import ProductCard from '@components/ProductCard.astro';
 import { formatCOP, t } from '@i18n/index';
-import { getCollection } from 'astro:content';
+import { createClient } from '@supabase/supabase-js';
+
+const supabase = createClient(
+  import.meta.env.SUPABASE_URL || 'https://cgmhcbcoovbadsfjmoen.supabase.co',
+  import.meta.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnbWhjYmNvb3ZiYWRzZmptb2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3MjEyMjQsImV4cCI6MjEwNDI5NzIyNH0.iyc1G1izwBkUVUVDJanuRN8vIximJw21GWyqrEVpslA'
+);
 
 export async function getStaticPaths() {
-  const products = await getCollection('products');
-  return products.map((p) => ({ params: { slug: p.slug }, props: { product: p } }));
+  // Obtener todos los slugs de Supabase para generar rutas estáticas
+  const { data } = await supabase.from('productos').select('titulo').limit(500);
+  if (!data) return [];
+  
+  const slugs = data.map(p => p.titulo
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+  );
+  
+  return slugs.map(slug => ({ params: { slug } }));
 }
 
-const { product } = Astro.props;
-const { data, slug } = product;
+const { slug } = Astro.params;
+
+interface ProductoRaw {
+  id: string;
+  titulo: string;
+  precio: number;
+  categoria: string;
+  subtipo: string | null;
+  coleccion: string | null;
+  destacado: boolean;
+  colores: any;
+  tallas: any;
+  imagenes: any;
+  descripcion_es: string | null;
+  descripcion_en: string | null;
+  fecha_creacion: string;
+}
+
+interface Producto {
+  id: string;
+  slug: string;
+  nombre: string;
+  categoria: string;
+  subtipo: string | null;
+  coleccion: string;
+  precio: number;
+  destacado: boolean;
+  colores: Array<{ nombre: string; hex: string; imagen: string }>;
+  tallas: string[];
+  descripcion_es: string;
+  descripcion_en: string;
+  imagenes: string[];
+  fecha_creacion: string;
+}
+
+function transformProduct(p: ProductoRaw): Producto {
+  const colores = Array.isArray(p.colores) ? p.colores :
+                 (typeof p.colores === 'string' ? JSON.parse(p.colores) : []);
+  const tallas = Array.isArray(p.tallas) ? p.tallas :
+                (typeof p.tallas === 'string' ? p.tallas.split(',').map((t: string) => t.trim()) : ['XS','S','M','L','XL']);
+  const imagenes = Array.isArray(p.imagenes) ? p.imagenes :
+                  (typeof p.imagenes === 'string' ? JSON.parse(p.imagenes) : []);
+  
+  const slug = p.titulo
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+  return {
+    id: p.id,
+    slug,
+    nombre: p.titulo,
+    categoria: p.categoria,
+    subtipo: p.subtipo,
+    coleccion: p.coleccion || 'Colección 2026',
+    precio: p.precio,
+    destacado: p.destacado,
+    colores: colores.length > 0 ? colores : [
+      { nombre: 'Único', hex: '#cccccc', imagen: imagenes[0] || '/logo.jpeg' }
+    ],
+    tallas,
+    descripcion_es: p.descripcion_es || '',
+    descripcion_en: p.descripcion_en || '',
+    imagenes,
+    fecha_creacion: p.fecha_creacion
+  };
+}
+
+// Fetch producto por slug
+const { data: productData } = await supabase
+  .from('productos')
+  .select('*')
+  .or(`titulo.ilike.%${slug}%,slug.eq.${slug}`)
+  .limit(1)
+  .single();
+
+if (!productData) {
+  return Astro.redirect('/404');
+}
+
+const data = transformProduct(productData);
+
+// Fetch productos relacionados
+const { data: relatedData } = await supabase
+  .from('productos')
+  .select('*')
+  .eq('categoria', data.categoria)
+  .neq('id', data.id)
+  .limit(3);
+
+const related: Producto[] = (relatedData || []).map(transformProduct);
+
 const firstColor = data.colores[0];
 const coleccion = data.coleccion || 'Colección 2026';
-const allProducts = await getCollection('products');
-const related = allProducts.filter((p) => p.data.categoria === data.categoria && p.slug !== slug).slice(0, 3);
 const ogImage = new URL(firstColor.imagen, Astro.site).toString();
 
 const variantes = [];
@@ -28,7 +132,7 @@ for (const color of data.colores) {
       name: `${color.nombre} · ${talla}`,
       price: data.precio,
       priceCurrency: 'COP',
-      sku: `${slug}-${color.nombre}-${talla}`.toLowerCase(),
+      sku: `${data.slug}-${color.nombre}-${talla}`.toLowerCase(),
       availability: 'https://schema.org/InStock',
       url: `https://wa.me/573169064533`,
     });
@@ -98,7 +202,7 @@ for (const color of data.colores) {
         {data.colores.length > 1 && (
           <section class="mt-10">
             <p class="eyebrow mb-3">{t('producto.colores')} <span class="text-ink/40 normal-case tracking-normal">· {data.colores.length} opciones</span></p>
-            <ColorSelector colores={data.colores} selected={firstColor.nombre} id={`pd-${slug}`} />
+            <ColorSelector colores={data.colores} selected={firstColor.nombre} id={`pd-${data.slug}`} />
             <p class="mt-2 text-sm text-ink/70" data-color-name>{firstColor.nombre}</p>
           </section>
         )}
