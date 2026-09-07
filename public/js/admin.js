@@ -30,13 +30,18 @@ const AdminPanel = {
     ALLOWED_TYPES: ['image/jpeg', 'image/png', 'image/webp', 'image/gif'],
 
     async init() {
+        console.log('[AdminPanel] Iniciando...');
         this.supabase = window.AdminSupabase;
         if (!this.supabase) {
-            console.error('AdminSupabase no inicializado. Verifica admin.html');
+            console.error('[AdminPanel] AdminSupabase no inicializado. Verifica admin.html');
             return;
         }
+        console.log('[AdminPanel] Supabase OK, cacheando elementos...');
         this.cacheElements();
+        console.log('[AdminPanel] Elementos cacheados:', Object.keys(this.elements).length);
+        console.log('[AdminPanel] loginForm:', this.elements.loginForm);
         this.bindEvents();
+        console.log('[AdminPanel] Eventos vinculados');
         this.initTallas();
         this.initColorForm();
         
@@ -140,8 +145,10 @@ const AdminPanel = {
     },
 
     bindEvents() {
+        console.log('[AdminPanel] bindEvents() llamado');
         // Auth
         this.elements.loginForm?.addEventListener('submit', (e) => this.handleLogin(e));
+        console.log('[AdminPanel] loginForm listener added:', !!this.elements.loginForm);
         this.elements.logoutBtn?.addEventListener('click', () => this.handleLogout());
         
         // Navegación tabs
@@ -215,6 +222,7 @@ const AdminPanel = {
     },
 
     async handleLogin(e) {
+        console.log('[AdminPanel] handleLogin llamado');
         e.preventDefault();
         
         const email = this.elements.loginForm.email.value.trim();
