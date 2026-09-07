@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pijama Manga Larga"
 categoria: pijamas
 subtipo: pijama-clasico
@@ -15,7 +15,7 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-manga-larga-38-000/whatsapp-image-2026-03-13-at-9.22.52-am-1-.jpeg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

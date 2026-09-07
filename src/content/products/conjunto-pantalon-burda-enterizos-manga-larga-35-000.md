@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Manga Larga"
 categoria: conjuntos
 subtipo: enterizo
@@ -15,7 +15,7 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/enterizos/manga-larga-35-000/c8f8e904-e3ed-46e2-a0a2-5ed9a99e352c.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

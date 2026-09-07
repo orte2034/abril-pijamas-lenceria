@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Mayas"
 categoria: lenceria
 subtipo: clasica
@@ -30,7 +30,7 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/mayas-20-000/f5ea6038-462c-4923-a391-caa5237da0e9.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

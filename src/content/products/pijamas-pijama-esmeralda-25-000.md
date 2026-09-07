@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pijama Esmeralda"
 categoria: pijamas
 subtipo: pijama-clasico
@@ -30,7 +30,7 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-esmeralda-25-000/fce1e40f-f0b7-4393-b43b-ea974fc1ae00.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

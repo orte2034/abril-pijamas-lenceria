@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Babydoll Clasico Mayatex"
 categoria: lenceria
 subtipo: babydoll

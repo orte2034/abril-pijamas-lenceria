@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Manga Corta"
 categoria: conjuntos
 subtipo: enterizo
@@ -12,7 +12,7 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/enterizos/manga-corta-32-000/88ef72bf-0093-4d15-b98a-ebc925ea5f45.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

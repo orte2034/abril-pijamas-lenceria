@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Luz"
 categoria: lenceria
 subtipo: clasica

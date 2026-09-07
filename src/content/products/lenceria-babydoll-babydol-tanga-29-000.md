@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Babydol Tanga"
 categoria: lenceria
 subtipo: babydoll

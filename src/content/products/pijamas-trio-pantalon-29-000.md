@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Trio Pantalon"
 categoria: pijamas
 subtipo: pijama-pantalon
@@ -21,7 +21,7 @@ colores:
   - nombre: "Color 5"
     hex: "#cccccc"
     imagen: "/web/pijamas/trio-pantalon-29-000/f60528b8-9208-428e-a7f1-c7db00abddea.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

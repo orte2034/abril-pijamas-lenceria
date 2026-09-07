@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Piajma Botones"
 categoria: pijamas
 subtipo: pijama-clasico

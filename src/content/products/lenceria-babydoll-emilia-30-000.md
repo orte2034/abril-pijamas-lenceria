@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Emilia"
 categoria: lenceria
 subtipo: babydoll

@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "ENTERIZO ALO"
 categoria: conjuntos
 coleccion: "Coleccion 2026"
@@ -7,10 +7,10 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/public/web/web/CONJUNTO SHORT ANIMADO/ENTERIZO MARMOL/ENTERIXO SUPLEX/ENTERIZO ALO $25.000/018beffc-320f-4bb3-9f26-df46b8f87387.jpg"
+    imagen: "/web/web/CONJUNTO SHORT ANIMADO/ENTERIZO MARMOL/ENTERIXO SUPLEX/ENTERIZO ALO $25.000/018beffc-320f-4bb3-9f26-df46b8f87387.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/public/web/web/CONJUNTO SHORT ANIMADO/ENTERIZO MARMOL/ENTERIXO SUPLEX/ENTERIZO ALO $25.000/a08cc9d8-3af5-49d2-b20f-171bc6719f10.jpg"
+    imagen: "/web/web/CONJUNTO SHORT ANIMADO/ENTERIZO MARMOL/ENTERIXO SUPLEX/ENTERIZO ALO $25.000/a08cc9d8-3af5-49d2-b20f-171bc6719f10.jpg"
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   ENTERIZO ALO - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.

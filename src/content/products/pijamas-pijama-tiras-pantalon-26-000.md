@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pijama Tiras Pantalon"
 categoria: pijamas
 subtipo: pijama-pantalon
@@ -30,7 +30,7 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-tiras-pantalon-26-000/gemini_generated_image_zhxp4tzhxp4tzhxp.png"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

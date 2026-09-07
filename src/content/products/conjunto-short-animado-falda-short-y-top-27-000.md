@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Falda Short Y Top"
 categoria: conjuntos
 subtipo: short
@@ -27,7 +27,7 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/conjunto-short-animado/falda-short-y-top-27-000/f1f33f08-2af5-4e27-9111-6000f4e98fe6.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

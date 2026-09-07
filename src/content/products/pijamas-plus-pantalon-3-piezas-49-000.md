@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "3 Piezas"
 categoria: pijamas
 subtipo: pijama-plus

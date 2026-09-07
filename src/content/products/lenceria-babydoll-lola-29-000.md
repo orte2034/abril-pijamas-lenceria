@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Lola"
 categoria: lenceria
 subtipo: babydoll

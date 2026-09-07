@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Body Sexi"
 categoria: lenceria
 subtipo: bodys

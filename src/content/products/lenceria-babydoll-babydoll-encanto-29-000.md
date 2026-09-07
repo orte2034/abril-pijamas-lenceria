@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Babydoll Encanto"
 categoria: lenceria
 subtipo: babydoll

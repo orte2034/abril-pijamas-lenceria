@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Overzise"
 categoria: pijamas
 subtipo: pijama-clasico
@@ -30,7 +30,7 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/pijamas/overzise-31-000/e55f54f9-88a3-43ab-91dc-6b5a9326e730.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

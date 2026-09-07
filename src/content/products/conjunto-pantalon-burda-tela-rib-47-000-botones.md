@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Botones"
 categoria: conjuntos
 subtipo: pantalon

@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Deportivo Dama"
 categoria: conjuntos
 subtipo: short

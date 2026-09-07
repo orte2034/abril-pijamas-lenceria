@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pijama Sublimada"
 categoria: pijamas
 subtipo: pijama-pantalon
@@ -27,7 +27,7 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-pantalon-33-000/pijama-sublimada/4.png"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Sublimada"
 categoria: pijamas
 subtipo: pijama-pantalon
@@ -21,7 +21,7 @@ colores:
   - nombre: "Color 5"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-pantalon-premier-48-000/sublimada-48-000/8974ec60-90b4-4d22-aa5c-31346e1e0dd9.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

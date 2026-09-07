@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjuntos Rib"
 categoria: conjuntos
 subtipo: pantalon
@@ -18,7 +18,7 @@ colores:
   - nombre: "Color 4"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/conjuntos-rib-43-000/f061d7ac-ca22-4bdb-b89a-afa507ecfc15.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

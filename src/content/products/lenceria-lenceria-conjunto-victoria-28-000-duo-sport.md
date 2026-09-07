@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Duo Sport"
 categoria: lenceria
 subtipo: clasica

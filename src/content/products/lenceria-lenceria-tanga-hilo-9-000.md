@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Tanga Hilo"
 categoria: lenceria
 subtipo: clasica
@@ -9,7 +9,7 @@ colores:
   - nombre: "Color 1"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/tanga-hilo-9-000/9eacfe16-812c-44af-b9a1-cf4dbeec7a40.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

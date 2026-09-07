@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Importados Bena"
 categoria: lenceria
 subtipo: clasica

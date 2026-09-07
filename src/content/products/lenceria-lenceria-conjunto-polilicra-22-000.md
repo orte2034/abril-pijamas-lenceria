@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Polilicra"
 categoria: lenceria
 subtipo: clasica
@@ -21,7 +21,7 @@ colores:
   - nombre: "Color 5"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-polilicra-22-000/c9e62ed5-1b8c-42c4-aaf7-3238f7aa776e.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

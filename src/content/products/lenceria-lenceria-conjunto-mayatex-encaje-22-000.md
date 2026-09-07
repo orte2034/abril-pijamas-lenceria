@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Mayatex Encaje"
 categoria: lenceria
 subtipo: clasica
@@ -12,7 +12,7 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-mayatex-encaje-22-000/2.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Body Bena Store"
 categoria: lenceria
 subtipo: bodys

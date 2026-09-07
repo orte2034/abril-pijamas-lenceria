@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Ref Girasol"
 categoria: lenceria
 subtipo: clasica

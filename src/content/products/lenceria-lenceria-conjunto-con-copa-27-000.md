@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Con Copa"
 categoria: lenceria
 subtipo: clasica

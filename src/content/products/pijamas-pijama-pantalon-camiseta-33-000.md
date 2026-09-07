@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pijama Pantalon Camiseta"
 categoria: pijamas
 subtipo: pijama-camiseta

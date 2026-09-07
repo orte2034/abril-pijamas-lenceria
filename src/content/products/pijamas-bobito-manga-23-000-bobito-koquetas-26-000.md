@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Bobito Koquetas"
 categoria: pijamas
 subtipo: bobito
@@ -18,7 +18,7 @@ colores:
   - nombre: "Color 4"
     hex: "#cccccc"
     imagen: "/web/pijamas/bobito-manga-23-000/bobito-koquetas/26-000/3.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

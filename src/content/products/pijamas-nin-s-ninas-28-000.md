@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Ninas"
 categoria: pijamas
 subtipo: ninos

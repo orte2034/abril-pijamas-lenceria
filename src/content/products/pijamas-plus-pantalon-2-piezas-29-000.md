@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "2 Piezas"
 categoria: pijamas
 subtipo: pijama-plus

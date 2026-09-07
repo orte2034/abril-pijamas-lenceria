@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Liguero Prince"
 categoria: lenceria
 subtipo: clasica

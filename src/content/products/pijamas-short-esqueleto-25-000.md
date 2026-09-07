@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Short Esqueleto"
 categoria: pijamas
 subtipo: pijama-short
@@ -12,7 +12,7 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/pijamas/short-esqueleto-25-000/b603d30f-a335-4b59-b03d-46729a1b335f.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

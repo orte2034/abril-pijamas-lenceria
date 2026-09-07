@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Nuevo"
 categoria: lenceria
 subtipo: clasica

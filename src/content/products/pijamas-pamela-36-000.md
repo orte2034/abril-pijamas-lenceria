@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pamela"
 categoria: pijamas
 subtipo: pijama-clasico
@@ -18,7 +18,7 @@ colores:
   - nombre: "Color 4"
     hex: "#cccccc"
     imagen: "/web/pijamas/pamela-36-000/93c05780-8080-4b5d-b7ed-a4a2020bf9df.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

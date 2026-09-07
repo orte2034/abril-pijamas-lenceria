@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pantalon Cargo"
 categoria: conjuntos
 subtipo: pantalon
@@ -36,7 +36,7 @@ colores:
   - nombre: "Color 10"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/pantalon-cargo-25-000/unnamed.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

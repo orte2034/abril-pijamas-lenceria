@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Flor De Loto"
 categoria: lenceria
 subtipo: clasica

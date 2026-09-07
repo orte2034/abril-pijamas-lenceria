@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Capri"
 categoria: pijamas
 subtipo: pijama-clasico
@@ -18,7 +18,7 @@ colores:
   - nombre: "Color 4"
     hex: "#cccccc"
     imagen: "/web/pijamas/capri-26-000/d6f8b47f-3a9f-46af-af64-7dd24ab59d8b.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

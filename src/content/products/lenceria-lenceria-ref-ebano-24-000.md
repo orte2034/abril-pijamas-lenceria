@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Ref Ebano"
 categoria: lenceria
 subtipo: clasica

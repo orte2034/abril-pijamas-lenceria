@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Mariposa"
 categoria: lenceria
 subtipo: clasica
@@ -30,7 +30,7 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-mariposa-28-000/e8d463e2-4667-40d0-98e2-b286eb4572e5.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

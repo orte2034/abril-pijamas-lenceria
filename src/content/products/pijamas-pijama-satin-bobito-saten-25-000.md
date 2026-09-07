@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Bobito Saten"
 categoria: pijamas
 subtipo: bobito

@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Azucena"
 categoria: lenceria
 subtipo: clasica
@@ -30,7 +30,7 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/azucena-27-000/d06ca596-e04f-4882-965f-9ca3da29285d.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

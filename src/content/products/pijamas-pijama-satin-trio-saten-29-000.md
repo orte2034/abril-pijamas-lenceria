@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Trio Saten"
 categoria: pijamas
 subtipo: pijama-satin

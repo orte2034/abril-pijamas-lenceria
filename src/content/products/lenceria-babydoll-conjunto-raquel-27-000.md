@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Raquel"
 categoria: lenceria
 subtipo: babydoll

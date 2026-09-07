@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Ref Azalea"
 categoria: lenceria
 subtipo: clasica

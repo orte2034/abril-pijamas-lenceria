@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Batola"
 categoria: lenceria
 subtipo: babydoll

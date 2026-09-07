@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pantalon Y Top"
 categoria: pijamas
 subtipo: pijama-pantalon
@@ -27,7 +27,7 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-pantalon-top-25-000/pantalon-y-top/whatsapp-image-2026-02-17-at-1.07.13-pm.jpeg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

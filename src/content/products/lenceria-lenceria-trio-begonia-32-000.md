@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Trio Begonia"
 categoria: lenceria
 subtipo: clasica

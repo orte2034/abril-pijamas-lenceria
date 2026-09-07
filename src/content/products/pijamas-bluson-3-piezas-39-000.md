@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Bluson 3 Piezas"
 categoria: pijamas
 subtipo: pijama-clasico
@@ -24,7 +24,7 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/pijamas/bluson-3-piezas-39-000/fed48716-3945-4bd1-990b-6028c69bbbe0.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

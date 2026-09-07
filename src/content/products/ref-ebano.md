@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "REF EBANO"
 categoria: lenceria
 subtipo: clasica
@@ -8,25 +8,25 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/10 SM  5 LXL.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/10 SM  5 LXL.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/15 LXL  5 SM.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/15 LXL  5 SM.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/5 SM  3 LXL.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/5 SM  3 LXL.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/5 SM  5 LXL.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/5 SM  5 LXL.jpg"
   - nombre: "Color 5"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/6SM  5 LXL.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/6SM  5 LXL.jpg"
   - nombre: "Color 6"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/8 LXL.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/8 LXL.jpg"
   - nombre: "Color 7"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/8 SM  1 LXL.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/REF EBANO $24.000/8 SM  1 LXL.jpg"
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   REF EBANO - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.

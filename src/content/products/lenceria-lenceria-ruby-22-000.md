@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Ruby"
 categoria: lenceria
 subtipo: clasica
@@ -33,7 +33,7 @@ colores:
   - nombre: "Color 9"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/ruby-22-000/d573683c-09d7-4eeb-81c2-62f4eed5e17e.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

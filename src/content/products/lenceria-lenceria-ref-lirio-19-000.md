@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Ref Lirio"
 categoria: lenceria
 subtipo: clasica

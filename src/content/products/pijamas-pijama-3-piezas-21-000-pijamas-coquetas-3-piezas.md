@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pijamas Coquetas 3 Piezas"
 categoria: pijamas
 subtipo: pijama-clasico
@@ -30,7 +30,7 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-3-piezas-21-000/pijamas-coquetas-3-piezas/ee03161e-5f67-4407-a348-3f7886aa8a6a.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

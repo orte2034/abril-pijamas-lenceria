@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Bata Satin"
 categoria: pijamas
 subtipo: pijama-satin
@@ -30,7 +30,7 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/pijamas/bata-satin-26-000/unnamed.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

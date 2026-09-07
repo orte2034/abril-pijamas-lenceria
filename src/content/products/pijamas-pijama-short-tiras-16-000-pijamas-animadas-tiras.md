@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Tiras"
 categoria: pijamas
 subtipo: pijama-tiras
@@ -24,7 +24,7 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-short-tiras-16-000/pijamas-animadas/tiras/gemini_generated_image_okymg7okymg7okym.png"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

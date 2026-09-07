@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Short Tiras"
 categoria: pijamas
 subtipo: pijama-plus
@@ -27,7 +27,7 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-tiras-plus-27-000/short-tiras-28-000/db2d5b2d-1813-4a90-9cd8-edc978fbd1e4.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

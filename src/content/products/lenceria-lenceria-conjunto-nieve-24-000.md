@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Nieve"
 categoria: lenceria
 subtipo: clasica
@@ -27,7 +27,7 @@ colores:
   - nombre: "Color 7"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-nieve-24-000/2-sm.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

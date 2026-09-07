@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Enterizo Alo"
 categoria: conjuntos
 subtipo: enterizo
@@ -12,7 +12,7 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/conjunto-short-animado/enterizo-marmol/enterixo-suplex/enterizo-alo-25-000/a08cc9d8-3af5-49d2-b20f-171bc6719f10.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

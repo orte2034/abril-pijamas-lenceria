@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "4 Piezas"
 categoria: pijamas
 subtipo: pijama-clasico
@@ -15,7 +15,7 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/pijamas/4-piezas-32-000/cb4b4771-709c-4b67-ba92-95a44fc835d5.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Yomper"
 categoria: conjuntos
 subtipo: pantalon
@@ -24,7 +24,7 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/yomper-28-000/f8f20859-473f-4215-a4e5-fd5b44250fb8.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

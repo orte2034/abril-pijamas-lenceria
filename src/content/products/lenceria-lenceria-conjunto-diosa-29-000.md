@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Diosa"
 categoria: lenceria
 subtipo: clasica

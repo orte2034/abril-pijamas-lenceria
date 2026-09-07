@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Marmolado"
 categoria: conjuntos
 subtipo: enterizo
@@ -15,7 +15,7 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/conjunto-marmolado-35-000/whatsapp-image-2026-02-05-at-11.56.24-am-7-.jpeg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

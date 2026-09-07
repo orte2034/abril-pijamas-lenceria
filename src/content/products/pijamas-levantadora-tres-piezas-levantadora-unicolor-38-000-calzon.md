@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Calzon"
 categoria: pijamas
 subtipo: pijama-clasico
@@ -12,7 +12,7 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/pijamas/levantadora-tres-piezas/levantadora-unicolor-38-000/calzon/75c810b8-f88a-4743-a26e-4d7925edc3f9.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Bobito Mayatex"
 categoria: pijamas
 subtipo: bobito
@@ -15,7 +15,7 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/pijamas/bobito-manga-23-000/bobito-mayatex/9cd5fead-13df-40b4-935a-386e5544ebcd.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

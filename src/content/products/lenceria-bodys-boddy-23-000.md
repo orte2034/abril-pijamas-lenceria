@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Boddy"
 categoria: lenceria
 subtipo: bodys

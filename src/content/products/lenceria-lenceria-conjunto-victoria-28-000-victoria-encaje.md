@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Victoria Encaje"
 categoria: lenceria
 subtipo: clasica

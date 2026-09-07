@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "CONJUNTO RAQUEL"
 categoria: lenceria
 subtipo: babydoll
@@ -8,7 +8,7 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/BABYDOLL/CONJUNTO  RAQUEL $27.000/4a3965ce-33f5-4472-b9fb-ed0746b6d3ff.jpg"
+    imagen: "/web/web/LENCERIA/BABYDOLL/CONJUNTO  RAQUEL $27.000/4a3965ce-33f5-4472-b9fb-ed0746b6d3ff.jpg"
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   CONJUNTO RAQUEL - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.

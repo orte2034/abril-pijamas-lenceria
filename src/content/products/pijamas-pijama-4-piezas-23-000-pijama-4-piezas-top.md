@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pijama 4 Piezas Top"
 categoria: pijamas
 subtipo: pijama-clasico
@@ -12,7 +12,7 @@ colores:
   - nombre: "Color 2"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-4-piezas-23-000/pijama-4-piezas-top/whatsapp-image-2026-02-09-at-11.18.56-am.jpeg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

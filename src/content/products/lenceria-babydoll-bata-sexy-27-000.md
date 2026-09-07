@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Bata Sexy"
 categoria: lenceria
 subtipo: babydoll

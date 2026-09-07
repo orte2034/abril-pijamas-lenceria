@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Lenceria Andres"
 categoria: lenceria
 subtipo: clasica

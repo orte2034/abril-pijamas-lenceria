@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Camiseta Plus"
 categoria: pijamas
 subtipo: pijama-plus
@@ -18,7 +18,7 @@ colores:
   - nombre: "Color 4"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-tiras-plus-27-000/camiseta-plus-36-000/f28fa2c4-00a1-420a-9b27-eed0cb2ed4f7.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

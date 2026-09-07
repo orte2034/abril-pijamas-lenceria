@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Pijama Short Camiseta"
 categoria: pijamas
 subtipo: pijama-camiseta
@@ -18,7 +18,7 @@ colores:
   - nombre: "Color 4"
     hex: "#cccccc"
     imagen: "/web/pijamas/pijama-short-camiseta-25-000/c8e92dac-9e1a-433c-ba12-92629adddb4c.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

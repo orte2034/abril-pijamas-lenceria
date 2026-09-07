@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Ref Jasmin"
 categoria: lenceria
 subtipo: clasica

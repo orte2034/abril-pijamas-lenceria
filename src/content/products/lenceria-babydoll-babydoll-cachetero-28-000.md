@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Babydoll Cachetero"
 categoria: lenceria
 subtipo: babydoll

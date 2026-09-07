@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Tela Burda"
 categoria: conjuntos
 subtipo: pantalon

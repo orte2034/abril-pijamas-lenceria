@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Victoria Polialgodon"
 categoria: lenceria
 subtipo: clasica

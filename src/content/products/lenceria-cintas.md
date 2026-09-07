@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "LENCERIA CINTAS"
 categoria: lenceria
 subtipo: clasica
@@ -8,7 +8,7 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/LENCERIA CINTAS $19.000/9778767a-d2df-4935-9dc3-76b87ac2de31.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/LENCERIA CINTAS $19.000/9778767a-d2df-4935-9dc3-76b87ac2de31.jpg"
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   LENCERIA CINTAS - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.

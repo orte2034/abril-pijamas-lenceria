@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Crop Top"
 categoria: lenceria
 subtipo: clasica

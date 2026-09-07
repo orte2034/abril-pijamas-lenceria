@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Babydol Silueta Minnie"
 categoria: lenceria
 subtipo: babydoll

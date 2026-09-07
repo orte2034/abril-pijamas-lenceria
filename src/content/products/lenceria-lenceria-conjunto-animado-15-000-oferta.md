@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Oferta"
 categoria: lenceria
 subtipo: clasica
@@ -30,7 +30,7 @@ colores:
   - nombre: "Color 8"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-animado-15-000/oferta/5.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

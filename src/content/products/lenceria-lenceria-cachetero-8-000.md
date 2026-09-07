@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Cachetero"
 categoria: lenceria
 subtipo: clasica

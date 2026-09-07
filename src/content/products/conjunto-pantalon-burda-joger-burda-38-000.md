@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Joger Burda"
 categoria: conjuntos
 subtipo: pantalon

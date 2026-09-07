@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "TRIO SATEN"
 categoria: pijamas
 coleccion: "Coleccion 2026"
@@ -7,25 +7,25 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/public/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/3045f200-66d4-48f7-89a5-22b29361ebed.jpg"
+    imagen: "/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/3045f200-66d4-48f7-89a5-22b29361ebed.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/public/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/5def4cc7-b713-46a8-b28e-8f54d3b1f21d.jpg"
+    imagen: "/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/5def4cc7-b713-46a8-b28e-8f54d3b1f21d.jpg"
   - nombre: "Color 3"
     hex: "#cccccc"
-    imagen: "/public/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/9d530b6c-2411-4c96-9a6d-708beebad76c.jpg"
+    imagen: "/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/9d530b6c-2411-4c96-9a6d-708beebad76c.jpg"
   - nombre: "Color 4"
     hex: "#cccccc"
-    imagen: "/public/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/d11e0b52-1335-468d-9a8d-d5713e9fed57.jpg"
+    imagen: "/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/d11e0b52-1335-468d-9a8d-d5713e9fed57.jpg"
   - nombre: "Color 5"
     hex: "#cccccc"
-    imagen: "/public/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/lxl (2).jpg"
+    imagen: "/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/lxl (2).jpg"
   - nombre: "Color 6"
     hex: "#cccccc"
-    imagen: "/public/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/lxl (3).jpg"
+    imagen: "/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/lxl (3).jpg"
   - nombre: "Color 7"
     hex: "#cccccc"
-    imagen: "/public/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/lxl.jpg"
+    imagen: "/web/web/PIJAMAS/PIJAMA SATIN/TRIO SATEN $29.000/lxl.jpg"
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   TRIO SATEN - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.

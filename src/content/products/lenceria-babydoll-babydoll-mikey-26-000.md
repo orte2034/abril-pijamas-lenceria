@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Babydoll Mikey"
 categoria: lenceria
 subtipo: babydoll

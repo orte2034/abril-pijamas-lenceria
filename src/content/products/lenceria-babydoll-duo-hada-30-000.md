@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Duo Hada"
 categoria: lenceria
 subtipo: babydoll

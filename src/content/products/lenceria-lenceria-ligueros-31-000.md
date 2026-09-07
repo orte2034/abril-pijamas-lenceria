@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Ligueros"
 categoria: lenceria
 subtipo: clasica

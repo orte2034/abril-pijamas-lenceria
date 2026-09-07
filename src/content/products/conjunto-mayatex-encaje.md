@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "CONJUNTO MAYATEX ENCAJE"
 categoria: lenceria
 subtipo: clasica
@@ -8,10 +8,10 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/CONJUNTO MAYATEX ENCAJE $22.000/2 (2).jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/CONJUNTO MAYATEX ENCAJE $22.000/2 (2).jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/CONJUNTO MAYATEX ENCAJE $22.000/2.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/CONJUNTO MAYATEX ENCAJE $22.000/2.jpg"
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   CONJUNTO MAYATEX ENCAJE - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.

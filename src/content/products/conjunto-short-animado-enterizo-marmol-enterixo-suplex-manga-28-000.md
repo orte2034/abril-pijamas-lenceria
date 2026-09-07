@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Manga"
 categoria: conjuntos
 subtipo: enterizo
@@ -21,7 +21,7 @@ colores:
   - nombre: "Color 5"
     hex: "#cccccc"
     imagen: "/web/conjunto-short-animado/enterizo-marmol/enterixo-suplex/manga-28-000/e3d83769-cda9-48ec-88fb-b422bef87f64.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

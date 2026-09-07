@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Cremallera"
 categoria: conjuntos
 subtipo: pantalon

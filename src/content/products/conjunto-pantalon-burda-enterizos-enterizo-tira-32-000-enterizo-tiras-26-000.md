@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Enterizo Tiras"
 categoria: conjuntos
 subtipo: enterizo
@@ -24,7 +24,7 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/conjunto-pantalon-burda/enterizos/enterizo-tira-32-000/enterizo-tiras-26-000/dd789b40-8a42-4588-8b68-341ba1cfb7e2.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

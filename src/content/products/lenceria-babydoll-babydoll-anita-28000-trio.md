@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Trio"
 categoria: lenceria
 subtipo: babydoll
@@ -24,7 +24,7 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/lenceria/babydoll/babydoll-anita-28000/trio/90ac95ac-7eb1-4afc-9f2c-4dc73f31fd01.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

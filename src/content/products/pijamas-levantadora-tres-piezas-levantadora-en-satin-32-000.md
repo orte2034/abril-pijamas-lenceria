@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Levantadora En Satin"
 categoria: pijamas
 subtipo: pijama-satin
@@ -18,7 +18,7 @@ colores:
   - nombre: "Color 4"
     hex: "#cccccc"
     imagen: "/web/pijamas/levantadora-tres-piezas/levantadora-en-satin-32-000/gemini_generated_image_zi068vzi068vzi06.png"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

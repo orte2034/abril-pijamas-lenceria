@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Short Burdacamiseta Piel Durazno"
 categoria: conjuntos
 subtipo: short

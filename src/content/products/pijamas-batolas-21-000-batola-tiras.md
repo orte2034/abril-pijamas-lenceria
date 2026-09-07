@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Batola Tiras"
 categoria: pijamas
 subtipo: pijama-tiras
@@ -24,7 +24,7 @@ colores:
   - nombre: "Color 6"
     hex: "#cccccc"
     imagen: "/web/pijamas/batolas-21-000/batola-tiras/b5fcca65-58aa-46c3-bc29-47e1fdc7bd49.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

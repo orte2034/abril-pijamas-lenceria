@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "TANGA HILO"
 categoria: lenceria
 subtipo: clasica
@@ -8,7 +8,7 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/public/web/web/LENCERIA/LENCERIA/TANGA HILO $9.000/9eacfe16-812c-44af-b9a1-cf4dbeec7a40.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/TANGA HILO $9.000/9eacfe16-812c-44af-b9a1-cf4dbeec7a40.jpg"
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
   TANGA HILO - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.

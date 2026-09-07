@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Amara"
 categoria: lenceria
 subtipo: clasica
@@ -15,7 +15,7 @@ colores:
   - nombre: "Color 3"
     hex: "#cccccc"
     imagen: "/web/lenceria/lenceria/conjunto-amara-23-000/91778855-3d0e-42ed-b7e2-432869c78f04.jpg"
-tallasDisponibles: ["Ãšnica"]
+tallasDisponibles: ["Única"]
 tallaUnica: true
 tallasConsultar: false
 tallas: ["XS", "S", "M", "L", "XL"]

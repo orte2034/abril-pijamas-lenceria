@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Ref Alondra"
 categoria: lenceria
 subtipo: clasica

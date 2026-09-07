@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Cachetero Encaje"
 categoria: lenceria
 subtipo: clasica

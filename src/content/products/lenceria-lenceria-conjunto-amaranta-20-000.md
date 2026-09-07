@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: "Conjunto Amaranta"
 categoria: lenceria
 subtipo: clasica
