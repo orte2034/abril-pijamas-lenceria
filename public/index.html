@@ -273,7 +273,6 @@
                     return;
                 }
                 
-                // Reutilizar la lógica de transformProduct de catalog.js
                 const products = data.map(p => {
                     const colores = Array.isArray(p.colores) ? p.colores : 
                                    (typeof p.colores === 'string' ? JSON.parse(p.colores) : []);
@@ -305,7 +304,8 @@
                     };
                 });
                 
-                // Renderizar cards (HTML idéntico a ProductCard.astro)
+                const formatCOP = (value) => new Intl.NumberFormat('es-CO', {style:'currency',currency:'COP',minimumFractionDigits:0}).format(value);
+                
                 grid.innerHTML = products.map(p => {
                     const firstColor = p.colores[0];
                     const coleccion = p.coleccion;
@@ -321,7 +321,7 @@
                                 </div>
                                 <div class="mt-4 flex items-baseline justify-between">
                                     <h3 class="font-serif text-lg text-ink">${p.nombre}</h3>
-                                    <span class="text-sm text-ink/70">${new Intl.NumberFormat('es-CO', {style:'currency',currency:'COP',minimumFractionDigits:0}).format(p.precio)}</span>
+                                    <span class="text-sm text-ink/70">${formatCOP(p.precio)}</span>
                                 </div>
                                 ${p.colores.length > 1 ? `<p class="mt-1 text-xs text-ink/60">${p.colores.length} colores · <span data-color-name">${firstColor.nombre}</span></p>` : `<p class="mt-1 text-xs text-ink/60 capitalize">${categoria}${subtipo && subtipo !== 'clasica' ? ` · ${subtipo}` : ''}</p>`}
                                 ${p.colores.length > 1 ? `<div class="mt-3 [&>[data-color-selector]]:scale-90 [&>[data-color-selector]]:origin-left">${p.colores.map((c,i) => `<button type="button" class="relative w-9 h-9 rounded-full border transition overflow-hidden ${i===0?'ring-2 ring-burgundy/30 border-burgundy border-2':'border-ink/20 hover:border-ink/50'}" style="${c.hex && c.hex!=='#cccccc'?'background-color:'+c.hex+';':''}" data-color="${c.nombre}" data-image="${c.imagen}" data-idx="${i}" aria-label="${c.nombre}" aria-pressed="${i===0}" title="${c.nombre}">${c.hex==='#cccccc'?`<img src="${c.imagen}" alt="${c.nombre}" class="w-full h-full object-cover" loading="lazy" />`:''}</button>`).join('')}</div>` : ''}
@@ -331,7 +331,6 @@
                     `;
                 }).join('');
                 
-                // Re-inicializar observers para las nuevas cards
                 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
                 
             } catch (err) {
