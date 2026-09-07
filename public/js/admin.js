@@ -699,6 +699,9 @@ const AdminPanel = {
                 'success'
             );
             
+            // Trigger Vercel rebuild via Deploy Hook
+            this.triggerVercelRebuild();
+            
             this.closeForm();
             this.loadProducts(this.currentPage);
             
@@ -1281,6 +1284,18 @@ const AdminPanel = {
             colores,
             fecha_creacion: p.fecha_creacion
         };
+    },
+
+    triggerVercelRebuild() {
+        const hookUrl = 'TU_DEPLOY_HOOK_URL_AQUI';
+        if (hookUrl && hookUrl !== 'TU_DEPLOY_HOOK_URL_AQUI') {
+            fetch(hookUrl, { method: 'POST' })
+                .then(res => {
+                    if (res.ok) this.showToast('Rebuild iniciado en Vercel', 'info');
+                    else console.warn('Deploy hook falló:', res.status);
+                })
+                .catch(err => console.error('Error llamando deploy hook:', err));
+        }
     },
 
     debounce(fn, delay) {
