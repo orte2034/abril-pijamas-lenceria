@@ -1,26 +1,8 @@
 {
-  "buildCommand": "echo 'Static deploy - no build needed'",
-  "outputDirectory": "public",
-  "devCommand": "npx serve public",
-  "framework": null,
-  "rewrites": [
-    {
-      "source": "/catalogo",
-      "destination": "/catalogo.html"
-    },
-    {
-      "source": "/producto/:slug",
-      "destination": "/producto.html"
-    },
-    {
-      "source": "/admin",
-      "destination": "/admin.html"
-    },
-    {
-      "source": "/admin.html",
-      "destination": "/admin.html"
-    }
-  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "framework": "astro",
   "headers": [
     {
       "source": "/(.*)",
@@ -44,7 +26,7 @@
       ]
     },
     {
-      "source": "/js/(.*)",
+      "source": "/_astro/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -53,7 +35,7 @@
       ]
     },
     {
-      "source": "/styles/(.*)",
+      "source": "/web/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
