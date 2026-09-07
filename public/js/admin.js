@@ -1287,7 +1287,7 @@ const AdminPanel = {
     },
 
     triggerVercelRebuild() {
-        const hookUrl = 'TU_DEPLOY_HOOK_URL_AQUI';
+        const hookUrl = 'https://api.vercel.com/v1/integrations/deploy/prj_ML8DB61nrTJEsL5f9IPWkOwdc6t6/R4GmZvS9Ao';
         if (hookUrl && hookUrl !== 'TU_DEPLOY_HOOK_URL_AQUI') {
             fetch(hookUrl, { method: 'POST' })
                 .then(res => {
