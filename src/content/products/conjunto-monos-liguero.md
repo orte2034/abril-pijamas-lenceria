@@ -1,5 +1,5 @@
 ---
-nombre: "CONJUNTO MOÑOS LIGUERO"
+nombre: "CONJUNTO MOÃ‘OS LIGUERO"
 categoria: lenceria
 subtipo: clasica
 coleccion: "Coleccion 2026"
@@ -8,17 +8,17 @@ destacado: false
 colores:
   - nombre: "Color 1"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/LENCERIA/CONJUNTO MOÑOS LIGUERO  $27.000/711e0db2-2899-442d-ae4e-e4313a9ae2cc.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/CONJUNTO MOÃ‘OS LIGUERO  $27.000/711e0db2-2899-442d-ae4e-e4313a9ae2cc.jpg"
   - nombre: "Color 2"
     hex: "#cccccc"
-    imagen: "/web/web/LENCERIA/LENCERIA/CONJUNTO MOÑOS LIGUERO  $27.000/fa140bd1-366b-46e3-9c5a-c58611c96c11.jpg"
+    imagen: "/web/web/LENCERIA/LENCERIA/CONJUNTO MOÃ‘OS LIGUERO  $27.000/fa140bd1-366b-46e3-9c5a-c58611c96c11.jpg"
 tallas: ["XS", "S", "M", "L", "XL"]
 descripcion_es: |
-  CONJUNTO MOÑOS LIGUERO - pieza disenada en Colombia por Abril Pijamas y Lenceria. Tejidos suaves, acabados con cuidado y colores que cuidan.
+  CONJUNTO MOÃ‘OS LIGUERO - pieza diseÃ±ada en Colombia por Abril Pijamas y LencerÃ­a. Tejidos suaves, acabados con cuidado y colores que cuidan.
 descripcion_en: |
-  CONJUNTO MOÑOS LIGUERO - piece designed in Colombia by Abril Pijamas and Lingerie. Soft fabrics, careful finishes.
+  CONJUNTO MOÃ‘OS LIGUERO - piece designed in Colombia by Abril Pijamas and Lingerie. Soft fabrics, careful finishes.
 ---
 
-# CONJUNTO MOÑOS LIGUERO
+# CONJUNTO MOï¿½OS LIGUERO
 
 Pieza de la Coleccion 2026 de Abril Pijamas y Lenceria. Hecha a mano en Colombia.
