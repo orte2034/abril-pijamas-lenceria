@@ -33,7 +33,7 @@ const wa = buildWhatsAppLink();
       </a>
     </div>
 
-    <form class="space-y-5" action="https://formspree.io/f/[TU-ID]" method="post" data-contact-form>
+    <form class="space-y-5" action={`https://formspree.io/f/${import.meta.env.FORMSPREE_ID || 'your-form-id'}`} method="post" data-contact-form>
       <div>
         <label class="eyebrow block mb-2" for="name">{t('contacto.form.name')}</label>
         <input id="name" name="name" required class="w-full border-b border-ink/30 bg-transparent py-3 focus:border-burgundy outline-none" />
