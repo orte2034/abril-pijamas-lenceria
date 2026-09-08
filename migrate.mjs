@@ -3,9 +3,11 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-// CONFIGURA ESTOS VALORES:
-const SUPABASE_URL = 'https://cgmhcbcoovbadsfjmoen.supabase.co';
-const SERVICE_ROLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnbWhjYmNvb3ZiYWRzZmptb2VuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4ODcyMTIyNCwiZXhwIjoyMTA0Mjk3MjI0fQ.h9i6evXG7AFnDxuNHhFPUgV_kb3RhK6j8IL_oX3qAzs'; // Settings → API → service_role (secret)
+// CONFIGURA ESTAS VARIABLES DE ENTORNO:
+// - SUPABASE_URL=https://TU_PROJECT.supabase.co
+// - SERVICE_ROLE_KEY=tu_service_role_key_aqui (Settings → API)
+const SUPABASE_URL = import.meta.env.SUPABASE_URL || 'https://cgmhcbcoovbadsfjmoen.supabase.co';
+const SERVICE_ROLE_KEY = import.meta.env.SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnbWhjYmNvb3ZiYWRzZmptb2VuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4ODcyMTIyNCwiZXhwIjoyMTA0Mjk3MjI0fQ.h9i6evXG7AFnDxuNHhFPUgV_kb3RhK6j8IL_oX3qAzs';
 
 const supabase = createClient(SUPABASE_URL, SERVICE_ROLE_KEY);
 
