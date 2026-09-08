@@ -19,9 +19,7 @@ function initSupabase() {
         return null;
     }
     
-    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-      realtime: { enabled: false }
-    });
+    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
     return supabaseClient;
 }
 
