@@ -42,47 +42,59 @@ interface Producto {
   fecha_creacion: string;
 }
 
-function transformProduct(p: ProductoRaw): Producto {
-  const colores = Array.isArray(p.colores) ? p.colores :
-                 (typeof p.colores === 'string' ? JSON.parse(p.colores) : []);
-  const tallas = Array.isArray(p.tallas) ? p.tallas :
-                (typeof p.tallas === 'string' ? p.tallas.split(',').map((t: string) => t.trim()) : ['XS','S','M','L','XL']);
-  const imagenes = Array.isArray(p.imagenes) ? p.imagenes :
-                  (typeof p.imagenes === 'string' ? JSON.parse(p.imagenes) : []);
-  
-  const slug = p.titulo
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
+function transformProduct(p: ProductoRaw): Producto | null {
+  try {
+    const colores = Array.isArray(p.colores) ? p.colores :
+                   (typeof p.colores === 'string' ? JSON.parse(p.colores) : []);
+    const tallas = Array.isArray(p.tallas) ? p.tallas :
+                  (typeof p.tallas === 'string' ? p.tallas.split(',').map((t: string) => t.trim()) : ['XS','S','M','L','XL']);
+    const imagenes = Array.isArray(p.imagenes) ? p.imagenes :
+                    (typeof p.imagenes === 'string' ? JSON.parse(p.imagenes) : []);
+    
+    const slug = p.titulo
+      .toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
 
-  return {
-    id: p.id,
-    slug,
-    nombre: p.titulo,
-    categoria: p.categoria,
-    subtipo: p.subtipo,
-    coleccion: p.coleccion || 'Colección 2026',
-    precio: p.precio,
-    destacado: p.destacado,
-    colores: colores.length > 0 ? colores : [
-      { nombre: 'Único', hex: '#cccccc', imagen: imagenes[0] || '/logo.jpeg' }
-    ],
-    tallas,
-    descripcion_es: p.descripcion_es || '',
-    descripcion_en: p.descripcion_en || '',
-    imagenes,
-    fecha_creacion: p.fecha_creacion
-  };
+    return {
+      id: p.id,
+      slug,
+      nombre: p.titulo,
+      categoria: p.categoria,
+      subtipo: p.subtipo,
+      coleccion: p.coleccion || 'Colección 2026',
+      precio: p.precio,
+      destacado: p.destacado,
+      colores: colores.length > 0 ? colores : [
+        { nombre: 'Único', hex: '#cccccc', imagen: imagenes[0] || '/logo.jpeg' }
+      ],
+      tallas,
+      descripcion_es: p.descripcion_es || '',
+      descripcion_en: p.descripcion_en || '',
+      imagenes,
+      fecha_creacion: p.fecha_creacion
+    };
+  } catch (err) {
+    console.error('Error transformando producto ID', p.id, ':', err);
+    return null;
+  }
 }
 
-const { data: productsData } = await supabase
+const { data: productsData, error } = await supabase
   .from('productos')
   .select('*')
   .order('fecha_creacion', { ascending: false })
   .limit(200);
 
-const products: Producto[] = (productsData || []).map(transformProduct);
+if (error) {
+  console.error('Supabase Error:', error);
+  const products: Producto[] = [];
+  // Puedes mostrar un mensaje aquí o products queda vacío
+}
+
+const rawProducts = (productsData || []).map(transformProduct);
+const products: Producto[] = rawProducts.filter((p): p is Producto => p !== null);
 const allColors = Array.from(new Set(products.flatMap((p) => p.colores.map((c) => c.nombre))));
 const maxPrice = products.length > 0 ? Math.max(...products.map((p) => p.precio)) : 50000;
 const cats = ['pijamas', 'lenceria', 'conjuntos'];
