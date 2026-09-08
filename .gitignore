@@ -8,3 +8,5 @@ dist/
 .vercel/
 __pycache__/
 *.tsbuildinfo
+
+.vercel
