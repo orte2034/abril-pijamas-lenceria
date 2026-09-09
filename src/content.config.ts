@@ -1,8 +1,9 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const products = defineCollection({
-  type: 'content',
-  schema: z.object({
+  loader: glob({ pattern: '**/*.md', base: './src/content/products' }),
+  schema: ({ z }) => z.object({
     nombre: z.string(),
     categoria: z.enum(['pijamas', 'lenceria', 'conjuntos']),
     subtipo: z.string().optional(),
