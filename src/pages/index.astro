@@ -1,5 +1,4 @@
 ---
-import ws from "ws";
 import Base from '@layouts/Base.astro';
 import ProductCard from '@components/ProductCard.astro';
 import { t } from '@i18n/index';
@@ -7,12 +6,7 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
   import.meta.env.SUPABASE_URL || 'https://cgmhcbcoovbadsfjmoen.supabase.co',
-  import.meta.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnbWhjYmNvb3ZiYWRzZmptb2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3MjEyMjQsImV4cCI6MjEwNDI5NzIyNH0.iyc1G1izwBkUVUVDJanuRN8vIximJw21GWyqrEVpslA',
-  {
-    realtime: {
-      transport: ws as any
-    }
-  }
+  import.meta.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnbWhjYmNvb3ZiYWRzZmptb2VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3MjEyMjQsImV4cCI6MjEwNDI5NzIyNH0.iyc1G1izwBkUVUVDJanuRN8vIximJw21GWyqrEVpslA'
 );
 
 interface ProductoRaw {
