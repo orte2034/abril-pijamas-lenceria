@@ -3,6 +3,7 @@ import Base from '@layouts/Base.astro';
 import ProductCard from '@components/ProductCard.astro';
 import { t } from '@i18n/index';
 import { createClient } from '@supabase/supabase-js';
+import { slugify } from '@utils/slugify';
 
 const supabase = createClient(
   import.meta.env.SUPABASE_URL || 'https://cgmhcbcoovbadsfjmoen.supabase.co',
@@ -50,11 +51,7 @@ function transformProduct(p: ProductoRaw): Producto {
   const imagenes = Array.isArray(p.imagenes) ? p.imagenes :
                   (typeof p.imagenes === 'string' ? JSON.parse(p.imagenes) : []);
   
-  const slug = p.titulo
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
+  const slug = slugify(p.titulo);
 
   return {
     id: p.id,

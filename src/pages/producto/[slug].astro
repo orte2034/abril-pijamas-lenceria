@@ -6,6 +6,7 @@ import WhatsAppButton from '@components/WhatsAppButton.astro';
 import ProductCard from '@components/ProductCard.astro';
 import { formatCOP, t } from '@i18n/index';
 import { createClient } from '@supabase/supabase-js';
+import { slugify } from '@utils/slugify';
 
 const supabase = createClient(
   import.meta.env.SUPABASE_URL || 'https://cgmhcbcoovbadsfjmoen.supabase.co',
@@ -13,16 +14,10 @@ const supabase = createClient(
 );
 
 export async function getStaticPaths() {
-  // Obtener todos los slugs de Supabase para generar rutas estáticas
   const { data } = await supabase.from('productos').select('titulo').limit(500);
   if (!data) return [];
   
-  const slugs = data.map(p => p.titulo
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '')
-  );
+  const slugs = data.map(p => slugify(p.titulo));
   
   return slugs.map(slug => ({ params: { slug } }));
 }
@@ -70,15 +65,11 @@ function transformProduct(p: ProductoRaw): Producto {
   const imagenes = Array.isArray(p.imagenes) ? p.imagenes :
                   (typeof p.imagenes === 'string' ? JSON.parse(p.imagenes) : []);
   
-  const slug = p.titulo
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
+  const productSlug = slugify(p.titulo);
 
   return {
     id: p.id,
-    slug,
+    slug: productSlug,
     nombre: p.titulo,
     categoria: p.categoria,
     subtipo: p.subtipo,
@@ -96,22 +87,20 @@ function transformProduct(p: ProductoRaw): Producto {
   };
 }
 
-// Fetch producto por slug: traer todos y filtrar localmente (el slug se genera desde titulo)
-const { data: allProducts } = await supabase
-  .from('productos')
-  .select('*')
-  .order('fecha_creacion', { ascending: false })
-  .limit(500);
+let productData: ProductoRaw | null = null;
+try {
+  const { data: allProducts, error } = await supabase
+    .from('productos')
+    .select('*')
+    .order('fecha_creacion', { ascending: false })
+    .limit(500);
 
-function slugify(text: string) {
-  return text
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
+  if (error) throw error;
+
+  productData = allProducts?.find(p => slugify(p.titulo) === slug) ?? null;
+} catch {
+  productData = null;
 }
-
-const productData = allProducts?.find(p => slugify(p.titulo) === slug);
 
 if (!productData) {
   return Astro.redirect('/404');
@@ -119,15 +108,21 @@ if (!productData) {
 
 const data = transformProduct(productData);
 
-// Fetch productos relacionados
-const { data: relatedData } = await supabase
-  .from('productos')
-  .select('*')
-  .eq('categoria', data.categoria)
-  .neq('id', data.id)
-  .limit(3);
+let relatedData: ProductoRaw[] = [];
+try {
+  const { data: related, error } = await supabase
+    .from('productos')
+    .select('*')
+    .eq('categoria', data.categoria)
+    .neq('id', data.id)
+    .limit(3);
 
-const related: Producto[] = (relatedData || []).map(transformProduct);
+  if (!error && related) relatedData = related;
+} catch {
+  relatedData = [];
+}
+
+const related: Producto[] = relatedData.map(transformProduct);
 
 const firstColor = data.colores[0];
 const coleccion = data.coleccion || 'Colección 2026';
@@ -250,7 +245,6 @@ for (const color of data.colores) {
   document.addEventListener('click', (e) => {
     const t = (e.target instanceof HTMLElement) ? e.target : null;
     if (!t) return;
-    // Thumbnails gallery on detail page
     if (t.classList.contains('thumbnail') || t.closest('.thumbnail')) {
       const thumb = t.classList.contains('thumbnail') ? t : t.closest('.thumbnail');
       const card = thumb.closest('[data-product-card]');
