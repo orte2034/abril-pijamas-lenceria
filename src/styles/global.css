@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+  --color-burgundy: #7b2d3f;
+  --color-burgundy-900: #4d1a28;
+  --color-crema: #f8f1ee;
+  --color-creamwarm: #f1e5dd;
+  --color-ink: #3a1a22;
+  --color-rosa-polvo: #d9a89b;
+  --color-soft: #e8c9bf;
+  --color-mist: #F2DDD7;
+  --font-serif: "Fraunces", Georgia, serif;
+}
+
 @layer base {
   :root {
     --color-bg: #f8f1ee;
