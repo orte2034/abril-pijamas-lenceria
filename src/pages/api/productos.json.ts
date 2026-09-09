@@ -1,3 +1,4 @@
+import ws from "ws";
 import type { APIRoute } from 'astro';
 import { createClient } from '@supabase/supabase-js';
 
