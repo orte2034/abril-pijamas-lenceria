@@ -96,13 +96,22 @@ function transformProduct(p: ProductoRaw): Producto {
   };
 }
 
-// Fetch producto por slug
-const { data: productData } = await supabase
+// Fetch producto por slug: traer todos y filtrar localmente (el slug se genera desde titulo)
+const { data: allProducts } = await supabase
   .from('productos')
   .select('*')
-  .or(`titulo.ilike.%${slug}%,slug.eq.${slug}`)
-  .limit(1)
-  .single();
+  .order('fecha_creacion', { ascending: false })
+  .limit(500);
+
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+const productData = allProducts?.find(p => slugify(p.titulo) === slug);
 
 if (!productData) {
   return Astro.redirect('/404');
